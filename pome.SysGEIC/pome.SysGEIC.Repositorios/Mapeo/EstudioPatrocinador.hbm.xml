@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.EstudioPatrocinador" table="EstudioPatrocinadores" lazy="false">
+        <id name="Id" column="IdEstudioPatrocinador">
+            <generator class="identity" />
+        </id>
+        <many-to-one name="Estudio" column="IdEstudio" class="pome.SysGEIC.Entidades.Estudio" />
+        <many-to-one name="Patrocinador" column="IdPatrocinador" class="pome.SysGEIC.Entidades.Patrocinador" />
+        <property name="Vigente" column="Vigente" />
+    </class>
+</hibernate-mapping>

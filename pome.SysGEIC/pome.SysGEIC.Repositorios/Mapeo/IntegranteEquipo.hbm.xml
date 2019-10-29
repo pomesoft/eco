@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.IntegranteEquipo" table="IntegranteEquipo" lazy="false">
+        <id name="Id" column="IdIntegranteEquipo">
+            <generator class="identity" />
+        </id>
+        <property name="IdEquipo" column="IdEquipo" />
+        <many-to-one name="Profesional" column="IdProfesional" class="pome.SysGEIC.Entidades.Profesional" />
+        <many-to-one name="Rol" column="IdRol" class="pome.SysGEIC.Entidades.Rol" />
+        <property name="Vigente" column="Vigente" />
+    </class>
+</hibernate-mapping>

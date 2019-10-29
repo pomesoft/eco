@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SysGEIC</title>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.custom.min.js" type="text/javascript"></script>
+    <script src="js/jquery.ui.ufd.min.js" type="text/javascript"></script>
+    <script src="js/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="js/datagrid-detailview.js" type="text/javascript"></script>
+    <script src="js/easyui-lang-es.js" type="text/javascript"></script>
+    <script src="js_page/BandejaInicio.js" type="text/javascript"></script>
+    <script src="js_page/BandejaInicio_Data.js" type="text/javascript"></script>
+    <link href="css/Estilo.css" rel="stylesheet" type="text/css" />
+    <link href="css/default/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="css/icon.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="ContenedorPrincipal">
+        <div id="Encabezado">
+            <div id="Logo">
+            </div>
+            <div id="InfoSesion">
+                Bienvenido Sr. Usuario
+            </div>
+        </div>
+        <div id="Menu">
+            <div style="padding: 3px; width: 99%; border: 1px solid #ccc">
+                <a href="PrototipoBandejaInicio.htm" class="easyui-menubutton">Inicio</a><a href=""
+                    class="easyui-menubutton" menu="#submenu2">Administrar sistema</a><a href="" class="easyui-menubutton"
+                        menu="#submenu3">Documentos</a><a href="" class="easyui-menubutton" menu="#submenu4">Estudios</a><a
+                            href="" class="easyui-menubutton" menu="#submenu5">Actividad Regulatoria</a><a href=""
+                                class="easyui-menubutton" menu="#submenu6">Actas</a></div>
+            <div id="submenu2" style="width: 200px;">
+                <div style="padding: 3px;" data-options="href:''">
+                    Roles</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Usuarios</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Especialidades</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Patologías</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Familia Química</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Centros Médicos</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Profesionales</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Patrocinador</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Monodrogas</div>
+            </div>
+            <div id="submenu3" style="width: 200px;">
+                <div style="padding: 3px;" data-options="href:''">
+                    Tipos de Documentos</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Estados de documentos</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Documentos</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Flujos de Estados</div>
+            </div>
+            <div id="submenu4" style="width: 200px;">
+                <div style="padding: 3px;" data-options="href:''">
+                    Estados de Estudios</div>
+                <div style="padding: 3px;" data-options="href:''">
+                    Datos de Estudios</div>
+            </div>
+        </div>
+        <div id="ContenedorBody">
+            <div id="panelEstudios" style="width: 25%; float: left;">
+                <div class="easyui-tabs">
+                    <div title="Estudios Activos" style="padding: 1px;">
+                        <table id="dgEstudios">
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="panelDocumentos" style="width: 50%; float: left;">
+                <div class="easyui-tabs">
+                    <div title="Documentos" style="padding: 1px;">
+                        <table id="dgDocumentos">
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="panelMasInfo" style="width: 25%; float: left;">
+                <div class="easyui-tabs">
+                    <div title="Notas" style="padding: 1px;">
+                        <table id="dgNotas">
+                        </table>
+                    </div>
+                    <div title="Actas" style="padding: 1px;">
+                        <table id="dgActas">
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="dlgDatosEstudios" class="easyui-dialog" style="width: 700px; height: 300px;
+                padding: 10px 20px" closed="true" modal="true" buttons="#dlgDatosEstudios-buttons">
+                <div class="ftitle">
+                    Información de Estudio</div>
+                <fieldset>
+                    <div class="fitem">
+                        <label for="txtCodigo">
+                            Código:</label>
+                        <input type="text" class="easyui-validatebox" id="txtCodigo" name="txtCodigo" data-options="required:true"
+                            style="width: 200px;"></input>
+                    </div>
+                    <div class="fitem">
+                        <label for="txtNombre">
+                            Nombre:</label>
+                        <input type="text" class="easyui-validatebox" id="txtNombre" name="txtNombre" data-options="required:true"
+                            style="width: 520px;"></input>
+                    </div>
+                    <div class="fitem">
+                        <label for="txtEstudioEstado">
+                            Estado:</label>
+                        <input type="text" class="easyui-validatebox" id="txtEstudioEstado" name="txtEstudioEstado"
+                            data-options="required:true" style="width: 200px;"></input>
+                    </div>
+                    <div class="fitem">
+                        <label for="txtPatologia">
+                            Patología:</label>
+                        <input type="text" id="txtPatologia" name="txtPatologia" style="width: 520px;"></input>
+                    </div>
+                    <div class="fitem">
+                        <label for="txtPoblacion">
+                            Población:</label>
+                        <input type="text" id="txtPoblacion" name="txtPoblacion" style="width: 520px;"></input>
+                    </div>
+                </fieldset>
+            </div>
+            <div id="dlgDatosEstudios-buttons">
+                <a href="#" class="easyui-linkbutton" iconcls="icon-ok" onclick="javascript:$('#dlgDatosEstudios').dialog('close')">
+                    Guardar</a> <a href="#" class="easyui-linkbutton" iconcls="icon-cancel" onclick="javascript:$('#dlgDatosEstudios').dialog('close')">
+                        Cancelar</a>
+            </div>
+            <div id="dlgBusqueda" class="easyui-dialog" style="width: 700px; height: 300px; padding: 10px 20px"
+                closed="true" modal="true" buttons="#dlgBusqueda-buttons">
+                <div class="ftitle">
+                    Búsqueda de estudios</div>
+                <div class="ftitle">
+                    modal del modal</div>
+            </div>
+            <div id="dlgBusqueda-buttons">
+                <a href="#" class="easyui-linkbutton" iconcls="icon-ok" onclick="javascript:$('#dlgBusqueda-buttons').dialog('close')">
+                    Guardar</a> <a href="#" class="easyui-linkbutton" iconcls="icon-cancel" onclick="javascript:$('#dlgBusqueda-buttons').dialog('close')">
+                        Cancelar</a>
+            </div>
+            <div id="dlgDatosDocumentos" class="easyui-dialog" style="width: 800px; height: 300px;
+                padding: 10px 20px" closed="true" modal="true" buttons="#dlgDatosDocumentos-buttons">
+                <div class="ftitle">
+                    Información de Documento</div>
+                <fieldset>
+                    <div class="fitem">
+                        <label for="txtNombreDocumento">
+                            Nombre:</label>
+                        <input type="text" class="easyui-validatebox" id="txtNombreDocumento" name="txtNombreDocumento"
+                            data-options="required:true" style="width: 620px;"></input>
+                    </div>
+                    <div class="fitem">
+                        <label for="txtTipoDocumento">
+                            Tipo:</label>
+                        <input type="text" class="easyui-validatebox" id="txtTipoDocumento" name="txtTipoDocumento"
+                            data-options="required:true" style="width: 620px;"></input>
+                    </div>
+                    <div class="fitem">
+                        <label for="txtVersion">
+                            Versión:</label>
+                        <input type="text" class="easyui-validatebox" id="txtVersion" name="txtVersion" data-options="required:true"
+                            style="width: 200px;"></input>
+                    </div>
+                    <div class="fitem">
+                        <label for="txtDocumentoEstado">
+                            Estado:</label>
+                        <input type="text" class="easyui-validatebox" id="txtDocumentoEstado" name="txtDocumentoEstado"
+                            data-options="required:true" style="width: 200px;"></input>
+                    </div>
+                </fieldset>
+            </div>
+            <div id="dlgDatosDocumentos-buttons">
+                <a href="#" class="easyui-linkbutton" iconcls="icon-view">Adjuntar Archivo</a> <a
+                    href="#" class="easyui-linkbutton" iconcls="icon-ok" onclick="javascript:$('#dlgDatosDocumentos').dialog('close')">
+                    Guardar</a> <a href="#" class="easyui-linkbutton" iconcls="icon-cancel" onclick="javascript:$('#dlgDatosDocumentos').dialog('close')">
+                        Cancelar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

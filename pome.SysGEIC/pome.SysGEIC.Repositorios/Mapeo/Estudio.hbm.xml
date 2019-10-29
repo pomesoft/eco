@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.Estudio" table="Estudios" lazy="false">
+        <id name="Id" column="IdEstudio">
+            <generator class="identity" />
+        </id>
+        <property name="Descripcion" column="Descripcion" />
+        <property name="Vigente" column="Vigente" />
+        <property name="Codigo" column="Codigo" />
+        <property name="NombreCompleto" column="NombreCompleto" />
+        <property name="Poblacion" column="Poblacion" />
+        <many-to-one name="Estado" column="IdEstado" class="pome.SysGEIC.Entidades.EstadoEstudio" />
+        <many-to-one name="Patologia" column="IdPatologia" class="pome.SysGEIC.Entidades.Patologia" />       
+        <bag name="Patrocinadores" inverse="true" lazy="false" cascade="all-delete-orphan">
+            <key column="IdEstudio" />
+            <one-to-many class="pome.SysGEIC.Entidades.EstudioPatrocinador" />
+        </bag>
+        <bag name="Monodrogas" inverse="true" lazy="false" cascade="all-delete-orphan">
+            <key column="IdEstudio" />
+            <one-to-many class="pome.SysGEIC.Entidades.EstudioMonodroga" />
+        </bag>        
+        <bag name="CentrosHabilitados" lazy="false" inverse="true" cascade="all-delete-orphan">
+            <key column="IdEstudio" />
+            <one-to-many class="pome.SysGEIC.Entidades.EstudioCentro" />
+        </bag>
+        <!--<bag name="Documentos" inverse="true" lazy="false" cascade="all-delete-orphan" where="Vigente = 1">
+            <key column="IdEstudio" />
+            <one-to-many class="pome.SysGEIC.Entidades.Documento" />
+        </bag>-->
+        <!--<bag name="Notas" inverse="true" lazy="false" cascade="all-delete-orphan" order-by="Fecha, IdActa, IdNota">
+            <key column="IdEstudio" />
+            <one-to-many class="pome.SysGEIC.Entidades.Nota" />
+        </bag>-->
+        <bag name="Participantes" inverse="true" lazy="false" cascade="all-delete-orphan">
+            <key column="IdEstudio" />
+            <one-to-many class="pome.SysGEIC.Entidades.EstudioParticipante" />
+        </bag>
+        <property name="FechaPresentacion" column="FechaPresentacion" />
+        <property name="RequiereAlerta" column="RequiereAlerta" />
+        <property name="MesesAlerta" column="MesesAlerta" />
+        <property name="EstadoSemaforo" column="EstadoSemaforo" />
+        <property name="IdTipoEstudio" column="IdTipoEstudio" />
+    </class>
+</hibernate-mapping>

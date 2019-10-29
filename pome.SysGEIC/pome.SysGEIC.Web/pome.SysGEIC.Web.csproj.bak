@@ -1,0 +1,714 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6FFA841-CA1E-4EBB-A571-B1BAF64EB5C2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pome.SysGEIC.Web</RootNamespace>
+    <AssemblyName>pome.SysGEIC.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DeployIisAppPath>Default Web Site/SysGEIC.Web</DeployIisAppPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FUA, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Frameworks\FileUploadAJAX.Subgurim.NET\FUA.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\Frameworks\Log4Net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ActaDatos.aspx" />
+    <Content Include="ActaDatosTest.aspx" />
+    <Content Include="BandejaInicio.aspx" />
+    <Content Include="BandejaInicioActas.aspx" />
+    <Content Include="CambiarClave.aspx" />
+    <Content Include="Centros.aspx" />
+    <Content Include="Controles\ActaControl.ascx" />
+    <Content Include="Controles\ActaControlTest.ascx" />
+    <Content Include="Controles\DocumentoControl.ascx" />
+    <Content Include="Controles\MenuControl.ascx" />
+    <Content Include="Controles\NotaControl.ascx" />
+    <Content Include="Controles\PlantillaControl.ascx" />
+    <Content Include="Controles\PlantillaSeleccionControl.ascx" />
+    <Content Include="css\default\accordion.css" />
+    <Content Include="css\default\calendar.css" />
+    <Content Include="css\default\combo.css" />
+    <Content Include="css\default\combobox.css" />
+    <Content Include="css\default\datagrid.css" />
+    <Content Include="css\default\datebox.css" />
+    <Content Include="css\default\dialog.css" />
+    <Content Include="css\default\easyui.css" />
+    <Content Include="css\default\images\blank.gif" />
+    <Content Include="css\default\images\calendar_nextmonth.gif" />
+    <Content Include="css\default\images\calendar_nextyear.gif" />
+    <Content Include="css\default\images\calendar_prevmonth.gif" />
+    <Content Include="css\default\images\calendar_prevyear.gif" />
+    <Content Include="css\default\images\datagrid_row_collapse.gif" />
+    <Content Include="css\default\images\datagrid_row_expand.gif" />
+    <Content Include="css\default\images\datebox_arrow.png" />
+    <Content Include="css\default\images\menu.gif" />
+    <Content Include="css\default\images\menu_downarrow.png" />
+    <Content Include="css\default\images\menu_rightarrow.png" />
+    <Content Include="css\default\images\menu_sep.png" />
+    <Content Include="css\default\images\menu_split_downarrow.png" />
+    <Content Include="css\default\images\messager_error.gif" />
+    <Content Include="css\default\images\messager_info.gif" />
+    <Content Include="css\default\images\messager_question.gif" />
+    <Content Include="css\default\images\messager_warning.gif" />
+    <Content Include="css\default\images\pagination_loading.gif" />
+    <Content Include="css\default\images\panel_loading.gif" />
+    <Content Include="css\default\images\slider_handle.png" />
+    <Content Include="css\default\images\tabs_close.gif" />
+    <Content Include="css\default\images\tree_arrows.gif" />
+    <Content Include="css\default\images\tree_checkbox_0.gif" />
+    <Content Include="css\default\images\tree_checkbox_1.gif" />
+    <Content Include="css\default\images\tree_checkbox_2.gif" />
+    <Content Include="css\default\images\tree_dnd_no.png" />
+    <Content Include="css\default\images\tree_dnd_yes.png" />
+    <Content Include="css\default\images\tree_elbow.png" />
+    <Content Include="css\default\images\tree_file.gif" />
+    <Content Include="css\default\images\tree_folder.gif" />
+    <Content Include="css\default\images\tree_folder_open.gif" />
+    <Content Include="css\default\images\tree_loading.gif" />
+    <Content Include="css\default\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="css\default\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="css\default\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="css\default\images\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="css\default\images\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="css\default\images\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="css\default\images\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="css\default\images\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="css\default\images\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="css\default\images\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="css\default\images\ui-icons_bd7b00_256x240.png" />
+    <Content Include="css\default\images\ui-icons_d19405_256x240.png" />
+    <Content Include="css\default\images\ui-icons_eb990f_256x240.png" />
+    <Content Include="css\default\images\ui-icons_ed9f26_256x240.png" />
+    <Content Include="css\default\images\ui-icons_fadc7a_256x240.png" />
+    <Content Include="css\default\images\ui-icons_ffe180_256x240.png" />
+    <Content Include="css\default\images\validatebox_pointer.gif" />
+    <Content Include="css\default\images\validatebox_warning.png" />
+    <Content Include="css\default\layout.css" />
+    <Content Include="css\default\linkbutton.css" />
+    <Content Include="css\default\menu.css" />
+    <Content Include="css\default\menubutton.css" />
+    <Content Include="css\default\messager.css" />
+    <Content Include="css\default\pagination.css" />
+    <Content Include="css\default\panel.css" />
+    <Content Include="css\default\progressbar.css" />
+    <Content Include="css\default\propertygrid.css" />
+    <Content Include="css\default\searchbox.css" />
+    <Content Include="css\default\slider.css" />
+    <Content Include="css\default\spinner.css" />
+    <Content Include="css\default\splitbutton.css" />
+    <Content Include="css\default\tabs.css" />
+    <Content Include="css\default\tree.css" />
+    <Content Include="css\default\validatebox.css" />
+    <Content Include="css\default\window.css" />
+    <Content Include="css\icon.css" />
+    <Content Include="css\icons\attach.png" />
+    <Content Include="css\icons\back.png" />
+    <Content Include="css\icons\blank.gif" />
+    <Content Include="css\icons\cancel.png" />
+    <Content Include="css\icons\collapse.png" />
+    <Content Include="css\icons\cut.png" />
+    <Content Include="css\icons\edit_add.png" />
+    <Content Include="css\icons\edit_remove.png" />
+    <Content Include="css\icons\expand.png" />
+    <Content Include="css\icons\filesave.png" />
+    <Content Include="css\icons\help.png" />
+    <Content Include="css\icons\mini_add.png" />
+    <Content Include="css\icons\mini_edit.png" />
+    <Content Include="css\icons\mini_refresh.png" />
+    <Content Include="css\icons\next.png" />
+    <Content Include="css\icons\no.png" />
+    <Content Include="css\icons\ok.png" />
+    <Content Include="css\icons\pencil.png" />
+    <Content Include="css\icons\print.png" />
+    <Content Include="css\icons\redo.png" />
+    <Content Include="css\icons\reload.png" />
+    <Content Include="css\icons\search.png" />
+    <Content Include="css\icons\sum.png" />
+    <Content Include="css\icons\tip.png" />
+    <Content Include="css\icons\undo.png" />
+    <Content Include="css\icons\view.gif" />
+    <Content Include="css\jquery-ui.custom.css" />
+    <Content Include="css\plain.css" />
+    <Content Include="css\Plantillas.css" />
+    <Content Include="css\PlantillasVistaPrevia.css" />
+    <Content Include="css\ufd-base.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="css\Estilo.css" />
+    <Content Include="DocumentoDatos.aspx" />
+    <Content Include="Equipos.aspx" />
+    <Content Include="EstadosDocumentos.aspx" />
+    <Content Include="EstadosEstudio.aspx" />
+    <Content Include="EstudioCargaDatos.aspx" />
+    <Content Include="FormTest.aspx" />
+    <Content Include="Global.asax" />
+    <None Include="Hibernate.cfg.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="img\FondoLogo.jpg" />
+    <Content Include="img\Loader.gif" />
+    <Content Include="img\login_icono.png" />
+    <Content Include="handlers\BandejaInicioActasHandler.ashx" />
+    <None Include="img\LogoLogin.jpg" />
+    <None Include="img\LogoActa.png" />
+    <None Include="img\LogoSitio.jpg" />
+    <Content Include="Impresion.aspx" />
+    <Content Include="js\datagrid-detailview.js" />
+    <Content Include="js\easyloader.js" />
+    <Content Include="js\easyui-lang-es.js" />
+    <Content Include="js\jquery-ui.custom.min.js" />
+    <Content Include="js\jquery.easyui.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.ui.ufd.min.js" />
+    <Content Include="js\plugins\jquery.accordion.js" />
+    <Content Include="js\plugins\jquery.calendar.js" />
+    <Content Include="js\plugins\jquery.combo.js" />
+    <Content Include="js\plugins\jquery.combobox.js" />
+    <Content Include="js\plugins\jquery.combogrid.js" />
+    <Content Include="js\plugins\jquery.combotree.js" />
+    <Content Include="js\plugins\jquery.datagrid.js" />
+    <Content Include="js\plugins\jquery.datebox.js" />
+    <Content Include="js\plugins\jquery.datetimebox.js" />
+    <Content Include="js\plugins\jquery.dialog.js" />
+    <Content Include="js\plugins\jquery.draggable.js" />
+    <Content Include="js\plugins\jquery.droppable.js" />
+    <Content Include="js\plugins\jquery.form.js" />
+    <Content Include="js\jquery.layout.js" />
+    <Content Include="js\plugins\jquery.linkbutton.js" />
+    <Content Include="js\plugins\jquery.menu.js" />
+    <Content Include="js\plugins\jquery.menubutton.js" />
+    <Content Include="js\plugins\jquery.messager.js" />
+    <Content Include="js\plugins\jquery.numberbox.js" />
+    <Content Include="js\plugins\jquery.numberspinner.js" />
+    <Content Include="js\plugins\jquery.pagination.js" />
+    <Content Include="js\plugins\jquery.panel.js" />
+    <Content Include="js\plugins\jquery.parser.js" />
+    <Content Include="js\plugins\jquery.PrintArea.js" />
+    <Content Include="js\plugins\jquery.progressbar.js" />
+    <Content Include="js\plugins\jquery.propertygrid.js" />
+    <Content Include="js\plugins\jquery.resizable.js" />
+    <Content Include="js\plugins\jquery.searchbox.js" />
+    <Content Include="js\plugins\jquery.slider.js" />
+    <Content Include="js\plugins\jquery.spinner.js" />
+    <Content Include="js\plugins\jquery.splitbutton.js" />
+    <Content Include="js\plugins\jquery.tabs.js" />
+    <Content Include="js\plugins\jquery.timespinner.js" />
+    <Content Include="js\plugins\jquery.tree.js" />
+    <Content Include="js\plugins\jquery.treegrid.js" />
+    <Content Include="js\plugins\jquery.validatebox.js" />
+    <Content Include="js\plugins\jquery.window.js" />
+    <Content Include="js_page\Actas.js" />
+    <Content Include="js_page\ActasTest.js" />
+    <Content Include="js_page\BandejaInicio.js" />
+    <Content Include="js_page\BandejaInicioActas.js" />
+    <Content Include="js_page\BandejaInicio_Data.js" />
+    <Content Include="js_page\CambiarClave.js" />
+    <Content Include="js_page\Centros.js" />
+    <Content Include="js_page\DocumentoDatos.js" />
+    <Content Include="js_page\Equipos.js" />
+    <Content Include="js_page\EstadosDocumento.js" />
+    <Content Include="js_page\EstadosEstudio.js" />
+    <Content Include="js_page\EstudioCargaDatos.js" />
+    <Content Include="js_page\GrillaAcceso.js" />
+    <Content Include="js_page\Notas.js" />
+    <Content Include="js_page\PlantillasCtrolSeleccion.js" />
+    <Content Include="js_page\Plantillas.js" />
+    <Content Include="js_page\Utiles.js" />
+    <Content Include="js_page\Monodrogas.js" />
+    <Content Include="js_page\Patologias.js" />
+    <Content Include="js_page\Patrocinadores.js" />
+    <Content Include="js_page\Profesionales.js" />
+    <Content Include="js_page\TiposDocumento.js" />
+    <Content Include="js_page\TiposUsuario.js" />
+    <Content Include="js_page\Usuarios.js" />
+    <Content Include="js_page\UtilesAJAX.js" />
+    <Content Include="Login\Login.aspx" />
+    <Content Include="Login\LoginANT.aspx" />
+    <Content Include="Monodrogas.aspx" />
+    <Content Include="Patologias.aspx" />
+    <Content Include="Patrocinadores.aspx" />
+    <Content Include="Plantillas.aspx" />
+    <Content Include="Plantillas\formDDJJ.html" />
+    <Content Include="Plantillas\PlantillaActa.html" />
+    <Content Include="Plantillas\PlantillaCartaRespuesta.html" />
+    <Content Include="Profesionales.aspx" />
+    <None Include="PrototipoBandejaInicio.htm" />
+    <Content Include="TestPage.aspx" />
+    <Content Include="TestUploader.aspx" />
+    <Content Include="TiposDocumento.aspx" />
+    <Content Include="TiposUsuario.aspx" />
+    <Content Include="Usuarios.aspx" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActaDatos.aspx.cs">
+      <DependentUpon>ActaDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActaDatos.aspx.designer.cs">
+      <DependentUpon>ActaDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActaDatosTest.aspx.cs">
+      <DependentUpon>ActaDatosTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActaDatosTest.aspx.designer.cs">
+      <DependentUpon>ActaDatosTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BandejaInicio.aspx.cs">
+      <DependentUpon>BandejaInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BandejaInicio.aspx.designer.cs">
+      <DependentUpon>BandejaInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BandejaInicioActas.aspx.cs">
+      <DependentUpon>BandejaInicioActas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BandejaInicioActas.aspx.designer.cs">
+      <DependentUpon>BandejaInicioActas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ActaControl.ascx.cs">
+      <DependentUpon>ActaControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ActaControl.ascx.designer.cs">
+      <DependentUpon>ActaControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ActaControlTest.ascx.cs">
+      <DependentUpon>ActaControlTest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ActaControlTest.ascx.designer.cs">
+      <DependentUpon>ActaControlTest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\DocumentoControl.ascx.cs">
+      <DependentUpon>DocumentoControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\DocumentoControl.ascx.designer.cs">
+      <DependentUpon>DocumentoControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\NotaControl.ascx.cs">
+      <DependentUpon>NotaControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\NotaControl.ascx.designer.cs">
+      <DependentUpon>NotaControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PlantillaControl.ascx.cs">
+      <DependentUpon>PlantillaControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\PlantillaControl.ascx.designer.cs">
+      <DependentUpon>PlantillaControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PlantillaSeleccionControl.ascx.cs">
+      <DependentUpon>PlantillaSeleccionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\PlantillaSeleccionControl.ascx.designer.cs">
+      <DependentUpon>PlantillaSeleccionControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentoDatos.aspx.cs">
+      <DependentUpon>DocumentoDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentoDatos.aspx.designer.cs">
+      <DependentUpon>DocumentoDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EstudioCargaDatos.aspx.cs">
+      <DependentUpon>EstudioCargaDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EstudioCargaDatos.aspx.designer.cs">
+      <DependentUpon>EstudioCargaDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\ActasHandler.ashx.cs">
+      <DependentUpon>ActasHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\ArchivosHandler.ashx.cs">
+      <DependentUpon>ArchivosHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\BandejaInicioActasHandler.ashx.cs">
+      <DependentUpon>BandejaInicioActasHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\BandejaInicioHandler.ashx.cs">
+      <DependentUpon>BandejaInicioHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Centros.aspx.cs">
+      <DependentUpon>Centros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Centros.aspx.designer.cs">
+      <DependentUpon>Centros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\MenuControl.ascx.cs">
+      <DependentUpon>MenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\MenuControl.ascx.designer.cs">
+      <DependentUpon>MenuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos.aspx.cs">
+      <DependentUpon>Equipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Equipos.aspx.designer.cs">
+      <DependentUpon>Equipos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EstadosDocumentos.aspx.cs">
+      <DependentUpon>EstadosDocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EstadosDocumentos.aspx.designer.cs">
+      <DependentUpon>EstadosDocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EstadosEstudio.aspx.cs">
+      <DependentUpon>EstadosEstudio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EstadosEstudio.aspx.designer.cs">
+      <DependentUpon>EstadosEstudio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormTest.aspx.cs">
+      <DependentUpon>FormTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormTest.aspx.designer.cs">
+      <DependentUpon>FormTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\CentrosHandler.ashx.cs">
+      <DependentUpon>CentrosHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\DocumentoDatosHandler.ashx.cs">
+      <DependentUpon>DocumentoDatosHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\EquiposHandler.ashx.cs">
+      <DependentUpon>EquiposHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\EstadosDocumentoHandler.ashx.cs">
+      <DependentUpon>EstadosDocumentoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\EstadosEstudioHandler.ashx.cs">
+      <DependentUpon>EstadosEstudioHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\EstudioCargaDatosHandler.ashx.cs">
+      <DependentUpon>EstudioCargaDatosHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\MonodrogasHandler.ashx.cs">
+      <DependentUpon>MonodrogasHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\NotasHandler.ashx.cs">
+      <DependentUpon>NotasHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\PatologiasHandler.ashx.cs">
+      <DependentUpon>PatologiasHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\PatrocinadoresHandler.ashx.cs">
+      <DependentUpon>PatrocinadoresHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\PlantillasHandler.ashx.cs">
+      <DependentUpon>PlantillasHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\ProfesionalesHandler.ashx.cs">
+      <DependentUpon>ProfesionalesHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\TiposDocumentoHandler.ashx.cs">
+      <DependentUpon>TiposDocumentoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\TiposUsuarioHandler.ashx.cs">
+      <DependentUpon>TiposUsuarioHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\SerializaHelper.cs" />
+    <Compile Include="Helpers\SessionHelper.cs" />
+    <Compile Include="Helpers\UtilHelper.cs" />
+    <Compile Include="Impresion.aspx.cs">
+      <DependentUpon>Impresion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Impresion.aspx.designer.cs">
+      <DependentUpon>Impresion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginANT.aspx.cs">
+      <DependentUpon>LoginANT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\LoginANT.aspx.designer.cs">
+      <DependentUpon>LoginANT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monodrogas.aspx.cs">
+      <DependentUpon>Monodrogas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monodrogas.aspx.designer.cs">
+      <DependentUpon>Monodrogas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patologias.aspx.cs">
+      <DependentUpon>Patologias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patologias.aspx.designer.cs">
+      <DependentUpon>Patologias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patrocinadores.aspx.cs">
+      <DependentUpon>Patrocinadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patrocinadores.aspx.designer.cs">
+      <DependentUpon>Patrocinadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas.aspx.cs">
+      <DependentUpon>Plantillas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plantillas.aspx.designer.cs">
+      <DependentUpon>Plantillas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesionales.aspx.cs">
+      <DependentUpon>Profesionales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesionales.aspx.designer.cs">
+      <DependentUpon>Profesionales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sitio.Master.cs">
+      <DependentUpon>Sitio.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio.Master.designer.cs">
+      <DependentUpon>Sitio.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUploader.aspx.cs">
+      <DependentUpon>TestUploader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUploader.aspx.designer.cs">
+      <DependentUpon>TestUploader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TiposDocumento.aspx.cs">
+      <DependentUpon>TiposDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TiposDocumento.aspx.designer.cs">
+      <DependentUpon>TiposDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TiposUsuario.aspx.cs">
+      <DependentUpon>TiposUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TiposUsuario.aspx.designer.cs">
+      <DependentUpon>TiposUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\UsuariosHandler.ashx.cs">
+      <DependentUpon>UsuariosHandler.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sitio.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pome.SysGEIC.Comunes\pome.SysGEIC.Comunes.csproj">
+      <Project>{C5E814EC-0474-4773-99DD-46573313F4EE}</Project>
+      <Name>pome.SysGEIC.Comunes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pome.SysGEIC.Entidades\pome.SysGEIC.Entidades.csproj">
+      <Project>{8FE8E54F-4B7E-4078-A911-5353B5C7FC21}</Project>
+      <Name>pome.SysGEIC.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pome.SysGEIC.Impresion\pome.SysGEIC.Impresion.csproj">
+      <Project>{FE4C5982-BA4E-4A1C-9631-252101757E73}</Project>
+      <Name>pome.SysGEIC.Impresion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pome.SysGEIC.ServiciosAplicacion\pome.SysGEIC.ServiciosAplicacion.csproj">
+      <Project>{7A7D382A-1557-4D21-BABA-96DBA33F5E45}</Project>
+      <Name>pome.SysGEIC.ServiciosAplicacion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\SkinSysGEIC\SkinSysGEIC.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\UsuariosHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\TiposUsuarioHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\EstadosEstudioHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\PatologiasHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\CentrosHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\PatrocinadoresHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\MonodrogasHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\ProfesionalesHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\EquiposHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\BandejaInicioHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\EstadosDocumentoHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\TiposDocumentoHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\DocumentoDatosHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\NotasHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\ActasHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Archivos\temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\ArchivosHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\EstudioCargaDatosHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\PlantillasHandler.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1212</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

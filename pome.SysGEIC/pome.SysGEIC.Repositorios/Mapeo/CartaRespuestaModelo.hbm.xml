@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.CartaRespuestaModelo" table="CartaRespuestaModelos" lazy="false">
+        <id name="Id" column="IdCartaRespuestaModelo">
+            <generator class="identity" />
+        </id>
+        <property name="Descripcion" column="Descripcion" />
+        <property name="Vigente" column="Vigente" />
+        <property name="NombrePlantilla" column="NombrePlantilla" />
+        <property name="IncluirDocumentosEvaluados" column="IncluirDocumentosEvaluados" />
+        <property name="IncluirDocumentosTomaConocimiento" column="IncluirDocumentosTomaConocimiento" />
+        <property name="IncluirDocumentosPedidoCambio" column="IncluirDocumentosPedidoCambio" />
+        <property name="IncluirTodosDocumentosEstudio" column="IncluirTodosDocumentosEstudio" />
+        <many-to-one name="PlantillaIntroduccion" column="IdPlantillaIntroduccion" class="pome.SysGEIC.Entidades.Plantilla" />
+        <many-to-one name="PlantillaIntroduccionOpcional" column="IdPlantillaIntroduccion2" class="pome.SysGEIC.Entidades.Plantilla" />
+        <many-to-one name="PlantillaPiePagina" column="IdPlantillaPiePagina" class="pome.SysGEIC.Entidades.Plantilla" />
+        <many-to-one name="PlantillaBuenasPracticas" column="IdPlantillaBuenasPracticas" class="pome.SysGEIC.Entidades.Plantilla" />
+        <many-to-one name="PlantillaTextoAprobacion" column="IdPlantillaTextoAprobacion" class="pome.SysGEIC.Entidades.Plantilla" />
+        <many-to-one name="PlantillaTextoFirmaPresidente" column="IdPlantillaTextoFirmaPresidente" class="pome.SysGEIC.Entidades.Plantilla" />
+        <property name="IncluirFirmaPresidente" column="IncluirFirmaPresidente" />
+        <property name="IncluirFirmaMiembros" column="IncluirFirmaMiembros" />
+        <property name="TextoLibre" type="StringClob">
+            <column name="TextoLibre" sql-type="NTEXT" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>

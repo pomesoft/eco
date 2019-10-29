@@ -1,0 +1,12 @@
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Comunes\bin\Debug\pome.SysGEIC.Comunes.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Comunes\bin\Debug\pome.SysGEIC.Comunes.pdb
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Comunes\bin\Debug\log4net.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Comunes\obj\Debug\pome.SysGEIC.Comunes.csprojResolveAssemblyReference.cache
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Comunes\obj\Debug\pome.SysGEIC.Comunes.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Comunes\obj\Debug\pome.SysGEIC.Comunes.pdb
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Comunes\bin\Debug\pome.SysGEIC.Comunes.dll
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Comunes\bin\Debug\pome.SysGEIC.Comunes.pdb
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Comunes\bin\Debug\log4net.dll
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Comunes\obj\Debug\pome.SysGEIC.Comunes.dll
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Comunes\obj\Debug\pome.SysGEIC.Comunes.pdb
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Comunes\obj\Debug\pome.SysGEIC.Comunes.csprojResolveAssemblyReference.cache

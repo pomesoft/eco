@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="pome.SysGEIC.Entidades.Recordatorio">
+    <Position X="6" Y="3.75" Width="2" />
+    <AssociationLine Name="TipoRecordatorio" Type="pome.SysGEIC.Entidades.TipoRecordatorio" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="4.452" />
+        <Point X="9.688" Y="4.452" />
+        <Point X="9.688" Y="4.011" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="InfoMail" Type="pome.SysGEIC.Entidades.RecordatorioInfoMail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="4.862" />
+        <Point X="9.438" Y="4.862" />
+        <Point X="9.438" Y="5.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABEAAAEAAAAAIAAAAUAAAQACEAAQgAAAAIA=</HashCode>
+      <FileName>Recordatorio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TipoRecordatorio" />
+      <Property Name="EstadoRecordatorio" />
+      <Property Name="InfoMail" />
+      <Property Name="Estudio" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Documentos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Estudio" Collapsed="true">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JBgSUhAAQQGCAQAEQAAAAohAQIIAIRAAAAKAMAQAAAg=</HashCode>
+      <FileName>Estudio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Documentos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Documento" Collapsed="true">
+    <Position X="2.5" Y="3.75" Width="2" />
+    <Members>
+      <Property Name="Estudio" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQQCuAEEAAAEAAAAAAAgIwAAICgBUAAAAQQAAAAAAA=</HashCode>
+      <FileName>Documento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Estudio" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.TipoRecordatorio">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAIA=</HashCode>
+      <FileName>TipoRecordatorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.EstadoRecordatorio">
+    <Position X="6" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EstadoRecordatorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.RecordatorioInfoMail">
+    <Position X="8.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAACCABAAQAAEAAg=</HashCode>
+      <FileName>RecordatorioInfoMail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.RecordatorioDocumento">
+    <Position X="2.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAEAAA=</HashCode>
+      <FileName>RecordatorioDocumento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Documento" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

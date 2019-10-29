@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.EstudioParticipante" table="EstudioParticipantes" lazy="false">
+        <id name="Id" column="IdEstudioParticipante">
+            <generator class="identity" />
+        </id>
+        <many-to-one name="Estudio" column="IdEstudio" class="pome.SysGEIC.Entidades.Estudio" />
+        <many-to-one name="Profesional" column="IdProfesional" class="pome.SysGEIC.Entidades.Profesional" />
+        <many-to-one name="Rol" column="IdRol" class="pome.SysGEIC.Entidades.Rol" />
+        <property name="Desde" column="Desde" type="DateTime" />
+        <property name="Hasta" column="Hasta" type="DateTime" />
+    </class>
+</hibernate-mapping>

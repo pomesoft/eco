@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.EstudioCentro" table="EstudioCentros" lazy="false">
+        <id name="Id" column="IdEstudioCentro">
+            <generator class="identity" />
+        </id>        
+        <many-to-one name="Estudio" column="IdEstudio" class="pome.SysGEIC.Entidades.Estudio" />
+        <many-to-one name="Centro" column="IdCentro" class="pome.SysGEIC.Entidades.Centro" />
+        <property name="Vigente" column="Vigente" />
+        <property name="Desde" column="Desde" type="DateTime" />
+        <property name="Hasta" column="Hasta" type="DateTime" />
+    </class>
+</hibernate-mapping>

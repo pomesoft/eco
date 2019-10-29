@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html>
+<head>    
+    <title></title>
+</head>
+<body>
+    
+    <iframe visibleOnHeader="true" visibleOnFooter="false" height="1px" width="100%">
+        <div style="width: 20cm; text-align: center;">
+            <img src="${Logo}">
+        </div>
+        <br />
+        <div style="width: 20cm; text-align: justify;">
+            <p>
+                ${Estudio} <br />
+                <span>Código: ${CodigoEstudio}. </span>
+                <span>Poatrocinado por: ${PatrocinadoPor}. </span>
+            </p>                
+        </div>
+    </iframe>
+
+    <iframe visibleOnHeader="false" visibleOnFooter="true" height="1px" width="80%">
+        <div class="piepagina" style="width: 20cm; text-align: center;">
+            <p>
+                <span>${TextoPiePagina}</span>
+            </p>
+        </div>    
+    </iframe>
+    
+
+    <div id="plantilla">
+        
+        <div class="singlecolumn">
+            <div class="alineacionDerecha">${FechaEncabezado}</div>
+            <br />
+            <br />
+            <p>
+                <span>${NombreInvestigador}</span><br />
+                <span>${RolInvestigador}</span><br />
+                <span>Buenos Aires - Argentina</span><br />
+                <span>De nuestra consideración</span><br />
+                <br />
+                <br />                
+            </p>
+            
+            <div style="text-align: justify;">
+                ${TextoIntroduccionCarta}
+            </div>
+            <div>
+            #if( $ImprimirDocumentosEvaluados == 'SI' )
+                #if( $DocumentosSeEvalua.Count > 0 )
+                    <ul>
+                        #foreach( $Documento in $DocumentosSeEvalua ) 
+                            <li>
+                                <span><strong> ${Documento.Documento}</strong></span>
+                                #if( ${Documento.Version} != '' ) 
+                                    <br />
+                                    <span>Versión: <strong>${Documento.Version}</strong> - Fecha: <strong>${Documento.FechaVersion}</strong></span>
+                                #end
+                            </li>
+                        #end
+                    </ul>
+                    <br />
+                #end
+            #end
+            
+            #if( $ImprimirDocumentosTomaConocimiento == 'SI' )
+                #if( $DocumentosSeTomaConocimiento.Count > 0 )
+                    #if( $ImprimirDocumentosEvaluados == 'SI' )
+                        <p>
+                            Asimismo ha tomado conocimiento de:
+                        </p>
+                    #end
+                    <ul>
+                        #foreach( $Documento in $DocumentosSeTomaConocimiento ) 
+                            <li>
+                                <span><strong> ${Documento.Documento}</strong></span>
+                                #if( ${Documento.Version} != '' ) 
+                                    <br />
+                                    <span>Versión: <strong>${Documento.Version}</strong> - Fecha: <strong>${Documento.FechaVersion}</strong></span>                                
+                                #end 
+                            </li>
+                        #end
+                    </ul>
+                    <br />
+                #end
+            #end
+
+            #if( $ImprimirDocumentosPedidoCambio == 'SI' )
+                #if( $DocumentosConPedidoCambio.Count > 0 )
+                    <p>
+                        Luego de evaluar la documentación de referencia se solicitan los siguientes cambios:
+                    </p>
+                    #foreach( $Documento in $DocumentosConPedidoCambio )
+                    <ul>
+                        <li>
+                            <p>
+                                <span><strong> ${Documento.Documento}</strong></span>
+                                #if( ${Documento.Version} != '' ) 
+                                    <br />
+                                    <span>Versión: <strong>${Documento.Version}</strong> - Fecha: <strong>${Documento.FechaVersion}</strong></span>                                
+                                #end
+                            </p> 
+                        </li>
+                        <br />
+                        <p>
+                            <span>${Documento.Comentario}</span>
+                        </p>
+                    </ul>
+                    #end 
+                #end
+            #end
+
+                <div class="alineacionJustificado">
+                    <p>
+                        ${TextoLibreCartaRespuesta}
+                    </p>
+                </div>
+
+
+                #if( $BloqueAprobacion == 'SI' )
+                <div id="bloqueBloqueAprobacion" class="alineacionJustificado" style="page-break-before:always;">
+                    <p>
+                        ${TextoLibreCartaRespuesta}
+                    </p>
+                    <p>
+                        ${TextoAprobacion}
+                    </p>
+                    <p>
+                        ${TextoBuenasPracticas}
+                    </p>
+
+                </div>
+                
+                #end
+
+                #if( $ImprimirFirmaPresidente == 'SI' )
+                <div style="page-break-before: auto;">
+                    <br /><br />
+
+                    <p>
+                        ${TextoFirma}
+                    </p>
+
+                    <br /><br /><br /><br />
+
+                    <div style="float: right; width: 10cm;">
+                        <div class="alineacionCentrado">
+                            <div class="line">
+                                <span class="data" style="width: 10cm"></span>
+                            </div>
+                            <div class="line">
+                                <span class="label">${PresidenteComite}</span><br />
+                                #if( ${LeyendaPresidenteComite} != '' )
+                                <span class="sublabel">${LeyendaPresidenteComite}</span><br />
+                                #end
+                                <span class="sublabel">${ComiteIniciales}</span><br />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                #end
+
+
+            </div>
+
+            
+
+                        
+            #if( $ImprimirFirmaParticipantes == 'SI' )
+                <div style="float: left; page-break-before: always;">
+                    <div class="lineHeight">
+                        <span class="label">PRESIDENTE:</span> 
+                    </div>
+                    <div class="lineHeight">
+                        <span class="label">${PresidenteComite}</span> <span class="data" style="width: 10cm"></span>
+                    </div>
+                    <div class="lineHeight">
+                        <span class="label">VOCALES:</span> 
+                    </div>                    
+                    #foreach( $Vocal in $Vocales )
+                        <div class="lineHeight">
+                            <span class="label">${Vocal}</span> <span class="data" style="width: 10cm"></span>
+                        </div>                        
+                    #end  
+                                  
+                </div>
+            #end            
+        </div>
+    </div>
+    
+</body>
+</html>
+<style type="text/css">
+    
+    .h1
+    {
+        font-family: Verdana, Arial, Sans-Serif;
+        color: #CC6600;
+        font-size: small;
+    }
+    
+    html
+    {
+        margin: 0px;
+    }
+    
+    body
+    {
+        font-family: Verdana;
+        font-size: 12pt;
+        margin: 0px;
+    }
+    
+    sup
+    {
+        font-size: 7pt;
+    }
+    
+    strong
+    {
+        font-weight: bold;
+    }
+    
+    em
+    {
+        font-style: italic;
+    }
+    
+    .piepagina
+    {
+        font-family: Verdana;
+        font-size: 9pt;
+    }
+    
+    
+    
+    #plantilla
+    {
+        /*border: 1px solid #000000;*/ 
+        width: 20cm; 
+        padding: 2px;
+        margin-top: 1cm;
+        margin-bottom: 1cm;
+        margin-left: 2cm;
+        margin-right: 1cm;
+        
+    }
+    
+    #plantilla h1
+    {
+        margin-top: 8pt;
+        margin-bottom: 0pt;
+        font-size: 16pt;
+        font-weight: bold;
+        color: Black;
+        text-align: center;
+    }
+    
+    #plantilla h2
+    {
+        margin-top: 8pt;
+        margin-bottom: 8pt;
+        font-size: 12pt;
+        font-weight: bold;
+        color: Black;
+    }
+    
+    #plantilla h3
+    {
+        margin-top: 12pt;
+        margin-bottom: 8pt;
+        font-size: 12pt;
+        font-weight: bold;
+        color: Black;
+    }
+    
+    #plantilla h4
+    {
+        margin-top: 0pt;
+        margin-bottom: 8pt;
+        font-size: 12pt;
+        font-weight: normal;
+        color: Black;
+    }
+    
+    #plantilla ul {
+	    margin-top: 8pt;
+	    margin-bottom: 8pt;
+	    margin-left: 20pt;
+	    list-style-type: disc;
+    }
+    
+    #plantilla li {
+	    margin-top: 4pt;
+	    margin-bottom: 4pt;
+    }
+
+    #plantilla ol {
+	    margin-left: 0px;
+	    list-style-type: decimal;
+	    list-style-position: inside;
+    }
+
+    #plantilla ol.letras {
+	    margin-left: 0px;
+	    list-style-type: lower-alpha;
+	    list-style-position: inside;
+    }
+    
+    #plantilla p
+    {
+        margin-top: 8pt;
+        margin-bottom: 8pt;
+    }
+    
+    #plantilla span.inputField
+    {
+        background-color: #c0c0c0;
+    }
+    
+    #plantilla span.important
+    {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    
+    #plantilla div.singlecolumn
+    {
+        width: 20cm;
+        padding-right: 15px;
+        text-align: justify;
+    }
+    
+    #plantilla div.alineacionDerecha
+    {
+        width: 99%;
+        text-align: right;
+    }
+    #plantilla div.alineacionCentrado
+    {
+        width: 99%;
+        text-align: center;        
+    }
+    
+    #plantilla div.alineacionJustificado
+    {
+        text-align: justify;
+    }
+    
+    
+    #plantilla div.line {
+	margin-top: 3pt;
+    }
+    
+    #plantilla div.lineHeight {
+	margin-top: 3pt;
+	height: 40pt;
+    }
+    
+    #plantilla div.headerline {
+	    margin-top: 4pt;
+	    margin-bottom: 4pt;
+    }
+
+    #plantilla span.headerlabel {
+	    font-size: 12pt;
+	    font-weight: bold;
+	    color: gray;
+	    font-family: Calibri, Verdana;
+    }
+
+    #plantilla span.label {
+	    font-size: 12pt;
+	    font-weight: bold;
+	    font-family: Calibri, Verdana;
+    }
+
+    #plantilla span.sublabel {
+	    font-size: 9pt;
+	    font-family: Calibri, Verdana;
+    }
+
+    #plantilla span.data {
+	    font-size: 12pt;
+	    font-family: Calibri, Verdana;
+	    border-bottom: gray 0.5pt solid;
+	    display: inline-block;
+	    margin-right: 0.2cm;
+	    padding-left: 0.05cm;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	    white-space: nowrap;
+    }
+
+    #plantilla div.footnote {
+	    margin-top: 0.8cm;
+	    font-size: 7pt;
+	    font-family: Calibri, Verdana;
+	    color: #999999;
+    }
+
+    #plantilla div.footnote p {
+	    margin-top: 2pt;
+	    margin-bottom: 2pt;
+    }
+
+    #plantilla span.field {
+	    color: #999999;
+	    font-size: 10pt;
+	    font-family: Calibri, Verdana;
+	    background-color: #c0c0c0;
+    }
+    
+</style>

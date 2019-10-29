@@ -1,0 +1,10 @@
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\bin\Debug\pome.SysGEIC.ServiciosDominio.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\bin\Debug\pome.SysGEIC.ServiciosDominio.pdb
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\obj\Debug\pome.SysGEIC.ServiciosDominio.csprojResolveAssemblyReference.cache
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\obj\Debug\pome.SysGEIC.ServiciosDominio.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\obj\Debug\pome.SysGEIC.ServiciosDominio.pdb
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\bin\Debug\pome.SysGEIC.ServiciosDominio.dll
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\bin\Debug\pome.SysGEIC.ServiciosDominio.pdb
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\obj\Debug\pome.SysGEIC.ServiciosDominio.csprojResolveAssemblyReference.cache
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\obj\Debug\pome.SysGEIC.ServiciosDominio.dll
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\obj\Debug\pome.SysGEIC.ServiciosDominio.pdb

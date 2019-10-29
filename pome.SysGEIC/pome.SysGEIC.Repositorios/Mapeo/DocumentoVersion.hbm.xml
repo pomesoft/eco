@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.DocumentoVersion" table="DocumentoVersiones" lazy="false">
+        <id name="Id" column="IdDocumentoVersion">
+            <generator class="identity" />
+        </id>
+        <property name="Descripcion" column="Descripcion" />
+        <property name="Fecha" column="Fecha"  type="DateTime" />
+        <property name="Archivo" column="Archivo" />
+        <property name="AprobadoANMAT" column="AprobadoANMAT" />
+        <property name="FechaAprobadoANMAT" column="FechaAprobadoANMAT"  type="DateTime" />
+        <many-to-one name="Documento" column="IdDocumento" class="pome.SysGEIC.Entidades.Documento" />
+        <bag name="Estados" inverse="true" lazy="false" cascade="all-delete-orphan">
+            <key column="IdDocumentoVersion" />
+            <one-to-many class="pome.SysGEIC.Entidades.DocumentoVersionEstado" />
+        </bag>
+        <bag name="Comentarios" inverse="true" lazy="false" cascade="all-delete-orphan">
+            <key column="IdDocumentoVersion" />
+            <one-to-many class="pome.SysGEIC.Entidades.DocumentoVersionComentario" />
+        </bag>
+        <bag name="Recordatorios" inverse="true" lazy="false" cascade="all-delete-orphan">
+            <key column="IdDocumentoVersion" />
+            <one-to-many class="pome.SysGEIC.Entidades.DocumentoVersionRecordatorio" />
+        </bag>        
+        <bag name="Participantes" inverse="true" lazy="false" cascade="all-delete-orphan">
+            <key column="IdDocumentoVersion" />
+            <one-to-many class="pome.SysGEIC.Entidades.DocumentoVersionParticipante" />
+        </bag>
+    </class>
+</hibernate-mapping>

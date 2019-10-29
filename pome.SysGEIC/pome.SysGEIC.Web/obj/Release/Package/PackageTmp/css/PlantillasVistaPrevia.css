@@ -1,0 +1,317 @@
+/* ------------------------------------- */
+
+@font-face {
+	font-family: Verdana;
+	font-style:  normal;
+	font-weight: normal;
+	src: url(OFBARCO0.eot);
+}
+
+html {
+	margin: 0px;
+}
+
+body {
+	font-family: Verdana;
+	font-size: 11px;
+	margin: 0px;
+}
+
+span {
+    font-size: 11px;
+    font-family: Verdana;
+}
+sup {
+	font-size: 7px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+div.newpage {
+	page-break-before: always;
+}
+
+/* ------------------------------------- */
+
+#formulario {
+	font-size: 8px;
+}
+
+#formulario img.logo {
+	float: left;
+	clear: left;
+	margin-right: 4cm;
+}
+
+#formulario div.versionFormulario 
+{
+	margin-top: 6px;
+	margin-bottom: 4px;
+	font-size: 6px;
+	font-weight: bold;
+	color: Gray;
+	text-align: right; 
+}
+
+#formulario h1 {
+	margin-top: 8px;
+	margin-bottom: 6px;
+	font-size: 11px;
+	font-weight: bold;
+	color: gray;
+}
+
+#formulario h2 {
+	margin-top: 8px;
+	margin-bottom: 6px;
+	font-size: 9px;
+	font-weight: bold;
+	color: #ff6600;
+}
+
+#formulario h3 {
+	margin-top: 6px;
+	margin-bottom: 4px;
+	font-size: 9px;
+	font-weight: bold;
+	color: #ff6600;
+}
+
+#formulario h4 {
+	margin-top: 6px;
+	margin-bottom: 4px;
+	font-size: 8px;
+	font-weight: bold;
+	color: #ff6600;
+}
+
+#formulario span.note {
+	font-size: 8px;
+	font-weight: bold;
+	color: gray;
+}
+
+#formulario span.alertnote {
+	font-size: 7px;
+	font-weight: bold;
+	color: #ff6600;
+}
+
+#formulario div.line {
+	margin-top: 3px;
+}
+
+#formulario div.headerline {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+#formulario span.headerlabel {
+	font-size: 9px;
+	font-weight: bold;
+	color: gray;
+}
+
+#formulario span.label {
+	font-size: 8px;
+	font-weight: bold;
+}
+
+#formulario span.sublabel {
+	font-size: 8px;
+}
+
+#formulario span.data {
+	font-size: 8px;
+	border-bottom: gray 0.5pt solid;
+	display: inline-block;
+	margin-right: 0.2cm;
+	padding-left: 0.05cm;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#formulario div.footnote {
+	margin-top: 0.8cm;
+	font-size: 7px;
+	color: #999999;
+}
+
+#formulario div.footnote p {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#formulario span.field {
+	color: #999999;
+	font-size: 7px;
+	background-color: #c0c0c0;
+}
+
+#formulario table#cobertura {
+	width: 16.41cm;
+	border: #999999 1px solid;
+	border-collapse: collapse;
+}
+
+#formulario table#cobertura td {
+	border: #999999 1px solid;
+	padding: 1px 6px 1px 6px;
+	font-size: 7px;
+	color: gray;
+	vertical-align: top;  
+}
+
+#formulario div.nominas{
+	font-size: 7px;
+	text-align:justify;
+}
+
+#formulario div.texto {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	text-align:justify;
+}
+
+#plantilla
+{
+    font-family: Verdana;
+    font-size: 11px;
+    text-align: justify;
+    letter-spacing: -0.4px; /*margin-bottom: 24px;*/
+    margin: 1px 25px 1px 20px;
+}
+
+#plantilla h1
+{
+    margin-top: 8px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    color: Black;
+    text-align: center;
+}
+
+#plantilla h2 {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 10px;
+	font-weight: bold;
+	color: Black;
+}
+
+#plantilla h3 {
+	margin-top: 12px;
+	margin-bottom: 8px;
+	font-size: 10px;
+	font-weight: bold;
+	color: Black;
+}
+
+#plantilla h4 {
+	margin-top: 0px;
+	margin-bottom: 8px;
+	font-size: 11px;
+	font-weight: normal;
+	color: Black;
+}
+
+#plantilla ul {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-left: 0px;
+	/*list-style-type: none;*/
+}
+
+#plantilla ol {
+	margin-left: 0px;
+	list-style-type: decimal;
+	list-style-position: inside;
+}
+
+#plantilla ol.letras {
+	margin-left: 0px;
+	list-style-type: lower-alpha;
+	list-style-position: inside;
+}
+
+#plantilla p {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+#plantilla span.inputField {
+	background-color: #c0c0c0;
+}
+
+#plantilla span.important {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#plantilla div.singlecolumn {
+	width: 99%;
+}
+
+#plantilla div.alineacionDerecha
+{
+    width: 99%;
+    text-align: right;
+}
+
+
+/* ------------------------------------- */
+
+#fondos {
+	font-size: 8px;
+	text-align: justify;
+}
+
+#fondos h1 {
+	margin-top: 6px;
+	font-size: 11px;
+	font-weight: bold;
+	color: gray;
+}
+
+#fondos img#logo {
+	margin-bottom: 0.5cm;
+}
+
+#fondos p {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	line-height: 16px;
+}
+
+#fondos span.data {
+	border-bottom: gray 0.5pt solid;
+	padding-right: 0.05cm;
+	padding-left: 0.05cm;
+}
+
+#fondos table#firmas {
+	width: 18.41cm;
+	border-collapse: collapse;
+	margin-top: 2cm;
+}
+
+#fondos table#firmas td {
+	width: 33.33%;
+	text-align: center;
+}
+
+#fondos table#firmas td.signspace {
+	height: 1cm;
+	vertical-align: bottom;
+}
+
+/* ------------------------------------- */
+

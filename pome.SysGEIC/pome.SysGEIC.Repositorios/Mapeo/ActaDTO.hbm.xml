@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.ActaDTO" table="Actas" lazy="false">
+        <id name="IdActa" column="IdActa">
+            <generator class="identity" />
+        </id>
+        <property name="Descripcion" column="Descripcion" />
+        <property name="FechaActa" column="Fecha" />
+        <property name="Hora" column="Hora" />
+        <property name="Cerrada" column="Cerrada" />
+    </class>
+</hibernate-mapping>

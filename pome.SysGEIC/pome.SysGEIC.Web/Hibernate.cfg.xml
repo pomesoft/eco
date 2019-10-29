@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+    <session-factory name="pomeNH01">
+
+        <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+        <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+        
+        <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
+        <!--DESARROLLO-->
+        <!--<property name="connection.connection_string">Data Source=USUARIO-PC\SQLEXP2016;Initial Catalog=pmlSysGEIC_DESA;User Id=sa;Password=pomelo73;</property>-->
+        
+        <!--PRODUCCION-->
+        <property name="connection.connection_string">Data Source=USUARIO-PC\SQLEXP2016;Initial Catalog=pmlSysGEIC_PROD;User Id=sa;Password=pomelo73;</property>
+        <!--<property name="connection.connection_string">Data Source=74.86.97.85;Initial Catalog=reality3_fundacioncidea;User Id=fundacioncidea;Password=aike#0Ht;</property>-->
+        <!--<property name="connection.connection_string">Data Source=192.99.150.165;Initial Catalog=reality2_ceifyc;User Id=ceifyc2;Password=1Bf#pymr;</property>-->
+
+        <!--<property name="connection.connection_string">Data Source=POMELO-PC\SQC:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Web\Hibernate.cfg.xmlLPOME;Initial Catalog=reality3_fundacioncidea;User Id=sa;Password=pomelo73;</property>-->
+        <!--<property name="dialect">NHibernate.Dialect.MsSql2005Dialect</property>        
+        <property name="connection.connection_string">Data Source=POMELO-PC\SQLEXPRESS2005;Initial Catalog=pmlSysGEIC2005;User Id=sa;Password=pomelo73;</property>-->
+        
+        <property name="show_sql">false</property>
+
+    </session-factory>
+</hibernate-configuration>
+

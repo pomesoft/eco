@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">    
+    <class name="pome.SysGEIC.Entidades.Documento" table="Documentos" lazy="false">
+        <id name="Id" column="IdDocumento">
+            <generator class="identity" />
+        </id>
+        <property name="Descripcion" column="Descripcion" />
+        <property name="Vigente" column="Vigente" />
+        <property name="IdEstudio" column="IdEstudio" />
+        <many-to-one name="TipoDocumento" column="IdTipoDocumento" class="pome.SysGEIC.Entidades.TipoDocumento" />
+        <bag name="Versiones" inverse="true" lazy="false" cascade="all-delete-orphan" order-by="Fecha, IdDocumentoVersion">
+            <key column="IdDocumento" />
+            <one-to-many class="pome.SysGEIC.Entidades.DocumentoVersion" />
+        </bag>
+    </class>
+</hibernate-mapping>

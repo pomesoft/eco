@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.TipoDocumento" table="TiposDocumento" lazy="false">
+        <id name="Id" column="IdTipoDocumento">
+            <generator class="identity" />
+        </id>
+        <property name="Descripcion" column="Descripcion" />
+        <property name="Vigente" column="Vigente" />
+        <property name="RequiereVersion" column="RequiereVersion" />
+        <property name="ListarCartaRespuesta" column="ListarCartaRespuesta" />
+        <property name="ListarDocsCartaRespuesta" column="ListarDocsCartaRespuesta" />
+        <property name="NecesarioAprobacionEstudio" column="NecesarioAprobacionEstudio" />
+        <many-to-one name="TipoDocumentoGrupo" column="IdTipoDocumentoGrupo" class="pome.SysGEIC.Entidades.TipoDocumentoGrupo" />
+        <bag name="Flujos" inverse="true" cascade="all-delete-orphan">
+            <key column="IdTipoDocumento" />
+            <one-to-many class="pome.SysGEIC.Entidades.TipoDocumentoFlujo" />
+        </bag>
+        <bag name="TiposRecordatorio" inverse="true" cascade="all-delete-orphan">
+            <key column="IdTipoDocumento" />
+            <one-to-many class="pome.SysGEIC.Entidades.TipoDocumentoRecordatorio" />
+        </bag>
+    </class>
+</hibernate-mapping>

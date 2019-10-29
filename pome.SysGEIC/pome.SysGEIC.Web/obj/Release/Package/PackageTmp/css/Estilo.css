@@ -1,0 +1,300 @@
+﻿/*body
+{    
+    font-family: Verdana;
+    font-size: 10px;
+    margin: 0 autocampoTextAreaPanel    background-color: #FFFFFF;
+    
+}*/
+
+fieldset 
+{ 
+    border: 1px solid #95B8E7;
+    margin-bottom: 7px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#ContenedorPrincipal
+{
+    /*
+    border: thin solid #C0C0C0;
+    margin: 0 auto;
+    width: 1200px;
+    height: 670px;
+    background-color: #EEEEEE;
+    padding: 2px;
+        */
+}
+
+#ContenedorBody
+{
+    padding-bottom: 1px;
+    display: block;
+}
+
+#Encabezado
+{
+    width: 100%;
+    display: inline-block;
+    margin: opx;
+}
+#Logo
+{
+    background-position: center center;
+    margin-left: 25px;
+}
+
+#tblLogin
+{
+    border: 1px ridge #ccc;
+    width: 100%;
+    background-image: url('../img/FondoLogo.jpg');
+    background-repeat: repeat-x;
+}
+
+#EncabezadoBloqueVacio
+{
+    display: inline-block;
+    margin-top: 15px;
+    width: 550px;    
+    text-align: center;
+}
+#InfoSesion
+{
+    display: inline-block;
+    margin: opx;
+    height: 72px;
+    width: 300px;
+    text-align: center;
+    vertical-align: top;
+}
+
+#lblUsuarioLogin
+{
+    font-size: 10px;
+    font-weight: bold;
+    color:#666;
+}
+
+#Menu
+{
+    display: block;
+    width: 100%;
+    /*height: 40px;*/
+    float: none;
+}
+
+#panelLogin {
+    display:block;
+    width:600px;
+    height:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-200px;
+    margin-left:-300px;
+}
+
+
+.NotificaError
+{
+    font-weight: bold;
+	font-size: 8pt;
+	color: red;
+}
+
+.titulo{
+    font-size:12px;
+    font-weight:bold;
+    color:#666;
+    padding: 5px; 
+    text-align: justify;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.ftitle{
+    font-size:12px;
+    font-weight:bold;
+    color:#666;
+    padding:5px 0;
+    margin-bottom:10px;
+    border-bottom:1px solid #ccc;
+}
+
+.fsubtitle{
+    font-size:10px;
+    padding:5px 0;
+    margin-bottom:10px;
+    border-bottom:1px solid #ccc;
+}
+.fitem
+{
+    margin-bottom: 10px;
+}
+.fitem label
+{
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    vertical-align: top;    
+}
+
+.ftitlelabel
+{
+    font-weight:bold;
+    padding:3px 0;
+    margin-bottom:5px;
+}
+
+.fitem .labelAncho
+{
+    display: inline-block;
+    width: 125px;
+    text-align: right;
+    vertical-align: top;
+}
+
+.fitem .labelAncho400Izq
+{
+    display: inline-block;
+    width: 400px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.fitem .labelAncho300Izq
+{
+    display: inline-block;
+    width: 300px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.fitem .labelAncho300Der
+{
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+    vertical-align: top;
+}
+
+.fitem .labelAncho200Der
+{
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    vertical-align: top;
+}
+
+.fitem .labelAncho250Izq
+{
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.faclaracion
+{
+    font-size: 9px;
+    font-weight: normal;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.bloqueCamposABM
+{
+    width: 400px; 
+    float: left;
+}
+.campoABM
+{
+    font-size: 11px;
+    width: 300px;
+}
+
+.combo
+{
+    
+}
+
+.campoABMsinTransform
+{
+    font-size: 11px;
+    width: 300px;
+}
+.campoABMLargo
+{
+    font-size: 11px;
+    width: 450px;
+}
+
+.campoTextArea
+{    
+    font-size: 11px;
+    width: 450px;
+}
+
+.campoTextAreaPanel
+{    
+    font-size: 11px;
+    width: 99%; 
+    height: 95%;
+}
+
+.contenedorControlesAnchoFull
+{
+    width: 100%;
+    float: none;    
+}
+
+.contenedorControlesMitad
+{
+    width: 50%;
+    float: left;
+    padding-left: 5px;
+}
+.contenedorControles40
+{
+    width: 39%; 
+    float: left; 
+    padding-left: 5px;
+}
+.contenedorControles60
+{
+    width: 60%; 
+    float: left; 
+    padding-left: 5px;
+}
+
+.contenedorControles20
+{
+    width: 19%; 
+    float: left; 
+    padding-left: 5px;
+}
+.contenedorControles80
+{
+    width: 80%; 
+    float: left; 
+    padding-left: 5px;
+}
+
+
+.contenedorControlesTercio
+{
+    width: 33%;
+    float: left;
+}
+
+.contenedorControles2Tercios
+{
+    width: 67%;
+    float: left;
+}
+
+.campoTextBuscador
+{
+    font-size: 11px;
+}

@@ -1,0 +1,4 @@
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\bin\Release\pome.SysGEIC.ServiciosDominio.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\bin\Release\pome.SysGEIC.ServiciosDominio.pdb
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\obj\Release\pome.SysGEIC.ServiciosDominio.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ServiciosDominio\obj\Release\pome.SysGEIC.ServiciosDominio.pdb

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.Usuario" table="Usuarios" lazy="false">
+        <id name="Id" column="IdUsuario">
+            <generator class="identity" />
+        </id>
+        <property name="Apellido" column="Apellido" />
+        <property name="Nombre" column="Nombre" />
+        <property name="LoginUsuario" column="LoginUsuario" />
+        <property name="LoginClave" column="LoginClave" />
+        <many-to-one name="TipoUsuario" column="IdTipoUsuario" class="pome.SysGEIC.Entidades.TipoUsuario" />
+        <property name="Vigente" column="Vigente" />
+        <!--<property name="TimesStamp" column="TimesStamp" type="timestamp" />-->
+        <property name="Mail" column="Mail" />
+        <bag name="Permisos" inverse="true" cascade="all-delete-orphan">
+            <key column="IdUsuario" />
+            <one-to-many class="pome.SysGEIC.Entidades.UsuarioAcceso" />
+        </bag>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.TipoUsuarioAcceso" table="TipoUsuarioAcceso" lazy="false">
+        <id name="Id" column="IdTipoUsuarioAcceso" >
+            <generator class="identity" />
+        </id>
+        <many-to-one name="TipoUsuario" column="IdTipoUsuario" class="pome.SysGEIC.Entidades.TipoUsuario" />
+        <property name="IdMenuPrincipal" column="IdMenu" />
+        <property name="IdMenuSecundario" column="IdMenuItem" />
+        <many-to-one name="NivelAcceso" column="IdNivelAcceso" class="pome.SysGEIC.Entidades.NivelAcceso" />
+    </class>
+</hibernate-mapping>

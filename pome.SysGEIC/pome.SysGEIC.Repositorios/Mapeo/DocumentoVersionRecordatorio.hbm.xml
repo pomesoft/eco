@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.DocumentoVersionRecordatorio" table="DocumentoVersionRecordatorios" lazy="false">
+        <id name="Id" column="IdRecordatorio">
+            <generator class="identity" />
+        </id>
+        <many-to-one name="Version" column="IdDocumentoVersion" class="pome.SysGEIC.Entidades.DocumentoVersion" />
+        <many-to-one name="ProfesionalAutor" column="IdProfesionalAutor" class="pome.SysGEIC.Entidades.Profesional" />
+        <property name="Fecha" column="Fecha" type="DateTime" />
+        <property name="Observaciones" column="Observaciones" />
+        <property name="Pendiente" column="Pendiente" />
+    </class>
+</hibernate-mapping>

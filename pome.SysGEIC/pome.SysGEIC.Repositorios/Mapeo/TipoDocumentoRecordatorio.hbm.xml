@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.TipoDocumentoRecordatorio" table="TipoDocumentoRecordatorios" lazy="false">
+        <id name="Id" column="IdTipoDocumentoRecordatorio">
+            <generator class="identity" />
+        </id>
+        <many-to-one name="TipoDocumento" column="IdTipoDocumento" class="pome.SysGEIC.Entidades.TipoDocumento" />
+        <many-to-one name="TipoRecordatorio" column="IdTipoRecordatorio" class="pome.SysGEIC.Entidades.TipoRecordatorio" />
+        <property name="Meses" column="Meses" />
+    </class>
+</hibernate-mapping>

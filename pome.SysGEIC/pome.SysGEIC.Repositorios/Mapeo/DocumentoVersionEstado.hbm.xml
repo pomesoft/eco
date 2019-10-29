@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.DocumentoVersionEstado" table="DocumentoVersionEstados" lazy="false">
+        <id name="Id" column="IdVersionEstado">
+            <generator class="identity" />
+        </id>
+        <many-to-one name="Version" column="IdDocumentoVersion" class="pome.SysGEIC.Entidades.DocumentoVersion" />
+        <many-to-one name="Estado" column="IdEstadoDocumento" class="pome.SysGEIC.Entidades.EstadoDocumento" />
+        <many-to-one name="Usuario" column="IdUsuario" class="pome.SysGEIC.Entidades.Usuario" />
+        <many-to-one name="ProfesionalAutor" column="IdProfesionalAutor" class="pome.SysGEIC.Entidades.Profesional" />
+        <many-to-one name="ProfesionalPresenta" column="IdProfesionalPresenta" class="pome.SysGEIC.Entidades.Profesional" />
+        <many-to-one name="ProfesionalResponsable" column="IdProfesionalResponsable" class="pome.SysGEIC.Entidades.Profesional" />
+        <property name="Fecha" column="Fecha" type="DateTime" />
+        <property name="Observaciones" column="Observaciones" />
+        <property name="EstadoFinal" column="EstadoFinal" />        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A7D382A-1557-4D21-BABA-96DBA33F5E45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pome.SysGEIC.ServiciosAplicacion</RootNamespace>
+    <AssemblyName>pome.SysGEIC.ServiciosAplicacion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="pml.Utilidades">
+      <HintPath>..\..\..\Frameworks\pml.Utilidades\pml.Utilidades.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CorreoElectronico.cs" />
+    <Compile Include="DynamicJsonConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicioAccesoUsuarios.cs" />
+    <Compile Include="ServicioActas.cs" />
+    <Compile Include="ServicioCorreoElectronico.cs" />
+    <Compile Include="ServicioDocumentos.cs" />
+    <Compile Include="ServicioEquipos.cs" />
+    <Compile Include="ServicioEstudios.cs" />
+    <Compile Include="ServicioImpresion.cs" />
+    <Compile Include="ServicioMonodrogas.cs" />
+    <Compile Include="ServicioParametricas.cs" />
+    <Compile Include="ServicioRecordatorios.cs" />
+    <Compile Include="ServicioReportes.cs" />
+    <Compile Include="ServiciosHelpers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pome.SysGEIC.Comunes\pome.SysGEIC.Comunes.csproj">
+      <Project>{C5E814EC-0474-4773-99DD-46573313F4EE}</Project>
+      <Name>pome.SysGEIC.Comunes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pome.SysGEIC.Entidades\pome.SysGEIC.Entidades.csproj">
+      <Project>{8FE8E54F-4B7E-4078-A911-5353B5C7FC21}</Project>
+      <Name>pome.SysGEIC.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pome.SysGEIC.Impresion\pome.SysGEIC.Impresion.csproj">
+      <Project>{FE4C5982-BA4E-4A1C-9631-252101757E73}</Project>
+      <Name>pome.SysGEIC.Impresion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pome.SysGEIC.Repositorios\pome.SysGEIC.Repositorios.csproj">
+      <Project>{28A1D19A-5CD6-4B2E-8875-9E998DC37B88}</Project>
+      <Name>pome.SysGEIC.Repositorios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

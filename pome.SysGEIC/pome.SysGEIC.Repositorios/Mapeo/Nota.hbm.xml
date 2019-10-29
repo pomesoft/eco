@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.Nota" table="Notas" lazy="false">
+        <id name="Id" column="IdNota">
+            <generator class="identity" />
+        </id>
+        <property name="Descripcion" column="Descripcion" />
+        <property name="Vigente" column="Vigente" />
+        <property name="IdEstudio" column="IdEstudio" />
+        <property name="IdActa" column="IdActa" />
+        <property name="Fecha" column="Fecha" />
+        <many-to-one name="Autor" column="IdAutor" class="pome.SysGEIC.Entidades.Profesional" />
+        <property name="NombreArchivo" column="NombreArchivo" />
+        <property name="PathArchivo" column="PathArchivo" />
+        <property name="RequiereRespuesta" column="RequiereRespuesta" />
+        <property name="Texto" type="StringClob">
+            <column name="Texto" sql-type="ntext" not-null="false" />
+        </property>
+        <!--<bag name="Documentos" inverse="true" cascade="all-delete-orphan">
+            <key column="IdNota" />
+            <one-to-many class="pome.SysGEIC.Entidades.NotaDocumento" />
+        </bag>-->
+        <property name="ActaImprimeAlFinal" column="ActaImprimeAlFinal" />        
+    </class>
+</hibernate-mapping>

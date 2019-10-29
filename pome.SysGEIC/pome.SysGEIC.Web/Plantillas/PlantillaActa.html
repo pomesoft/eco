@@ -1,0 +1,294 @@
+<html>
+<head>
+</head>
+<body>
+    <div id="plantilla">
+        <table align="center" cellpadding="1" cellspacing="1">
+            #if ( ${ConFormato} == 1 )
+            <tr>
+                <td align="center">
+                    <!--    <img src="${Logo}">     -->
+                    <img src="../img/LogoActa.png" />
+                </td>
+            </tr>
+            #end
+            <tr>
+                <td>
+                    <h2>
+                        ${Titulo}
+                    </h2>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <div class="singlecolumn">
+            <p>${ComentarioInicialFijo}</p>
+
+            <p>${ComentarioInicial}</p>
+
+            #foreach( $EstudioTratado in $EstudiosTratados )
+                <p>
+                    <span><strong>${EstudioTratado.Orden}</strong> - <strong>${EstudioTratado.NombreCompleto}</strong></span>
+                    <br />
+                    <span>Código: <strong>${EstudioTratado.Codigo}</strong></span>
+                    <br />
+                    <span>Patrocinador: <strong>${EstudioTratado.Patrocinador}</strong></span>
+                    <br />
+                    <span>Investigador principal: <strong>${EstudioTratado.InvestigadorPrincipal}</strong></span>
+                    <br />
+                    #foreach( $NotaTratadaInicio in $EstudioTratado.NotasInicio )
+                        #if( ${NotaTratadaInicio} != '' )
+                            <span class="comentario">${NotaTratadaInicio}</span>
+                        #end
+                    #end
+
+                    #set ( $grupo = '' )
+
+                    #if( $EstudioTratado.Documentos.Count > 0 )
+                        #foreach($DocumentoTratado in $EstudioTratado.Documentos )
+
+                            #if( $grupo != $DocumentoTratado.Grupo )
+                                #set ( $grupo = $DocumentoTratado.Grupo )
+                                <span><strong>${EstudioTratado.Orden}.$grupo:</strong></span>
+                                <br />
+                            #end
+                            
+                            <span><strong>${DocumentoTratado.Orden}</strong> - <strong>${DocumentoTratado.Documento}</strong></span>                                
+                            <br />
+                            #if( ${DocumentoTratado.Version} != '' && ${DocumentoTratado.FechaVersion} != '')
+                                <span>Versión: <strong>${DocumentoTratado.Version}</strong> - Fecha: <strong>${DocumentoTratado.FechaVersion}</strong></span>
+                                <br />
+                            #else
+                                #if( ${DocumentoTratado.Version} != '' )
+                                    <span>Versión: <strong>${DocumentoTratado.Version}</strong></span>
+                                    <br />
+                                #end
+                                #if( ${DocumentoTratado.FechaVersion} != '' )
+                                    <span>Fecha: <strong>${DocumentoTratado.FechaVersion}</strong></span>
+                                    <br />
+                                #end
+                            #end
+
+                            #if( ${DocumentoTratado.Comentario} != '' )
+                                <span class="comentario">${DocumentoTratado.Comentario}</span>
+                                <br />
+                            #end
+                        #end
+                    #end
+
+                    #foreach( $NotaTratadaFinal in $EstudioTratado.NotasFinal )
+                        #if( ${NotaTratadaFinal} != '' )
+                            <span class="comentario">${NotaTratadaFinal}</span>
+                        #end
+                    #end
+                </p>
+            #end
+            <p>
+                <span>${ComentarioFinal}</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+<style type="text/css">
+    .h1 {
+        font-family: Verdana, Arial, Sans-Serif;
+        color: #CC6600;
+        font-size: small;
+    }
+
+    html {
+        margin: 0px;
+    }
+
+    body {
+        font-family: Verdana, Arial, Calibri;
+        font-size: 10pt;
+        line-height: 1.5em;
+        margin: 0px;
+    }
+
+    sup {
+        font-size: 7pt;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    .piepagina {
+        font-family: Verdana, Arial, Calibri;
+        font-size: 9pt;
+    }
+
+
+    #plantilla {
+        /*border: 1px solid #000000;*/
+        width: 20cm;
+        padding: 2px;
+        margin-top: 1cm;
+        margin-bottom: 1cm;
+        margin-left: 1cm;
+        margin-right: 1cm;
+    }
+
+        #plantilla h1 {
+            margin-top: 8pt;
+            margin-bottom: 0pt;
+            font-size: 16pt;
+            font-weight: bold;
+            color: Black;
+            text-align: center;
+        }
+
+        #plantilla h2 {
+            margin-top: 8pt;
+            margin-bottom: 8pt;
+            font-size: 10pt;
+            font-weight: bold;
+            color: Black;
+        }
+
+        #plantilla h3 {
+            margin-top: 12pt;
+            margin-bottom: 8pt;
+            font-size: 10pt;
+            font-weight: bold;
+            color: Black;
+        }
+
+        #plantilla h4 {
+            margin-top: 0pt;
+            margin-bottom: 8pt;
+            font-size: 10pt;
+            font-weight: normal;
+            color: Black;
+        }
+
+        #plantilla ul {
+            margin-top: 8pt;
+            margin-bottom: 8pt;
+            margin-left: 20pt;
+            list-style-type: disc;
+        }
+
+        #plantilla li {
+            margin-top: 4pt;
+            margin-bottom: 4pt;
+        }
+
+        #plantilla ol {
+            margin-left: 0px;
+            list-style-type: decimal;
+            list-style-position: inside;
+        }
+
+            #plantilla ol.letras {
+                margin-left: 0px;
+                list-style-type: lower-alpha;
+                list-style-position: inside;
+            }
+
+        #plantilla p {
+            margin-top: 8pt;
+            margin-bottom: 8pt;
+        }
+
+        #plantilla span.inputField {
+            background-color: #c0c0c0;
+        }
+
+        #plantilla span.important {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        #plantilla div.singlecolumn {
+            width: 20cm;
+            padding-right: 15px;
+            text-align: justify;
+        }
+
+        #plantilla div.alineacionDerecha {
+            width: 99%;
+            text-align: right;
+        }
+
+        #plantilla div.alineacionCentrado {
+            width: 99%;
+            text-align: center;
+        }
+
+        #plantilla div.line {
+            margin-top: 3pt;
+        }
+
+        #plantilla div.lineHeight {
+            margin-top: 3pt;
+            height: 50pt;
+        }
+
+        #plantilla div.headerline {
+            margin-top: 4pt;
+            margin-bottom: 4pt;
+        }
+
+        #plantilla span.headerlabel {
+            font-size: 9pt;
+            font-weight: bold;
+            color: gray;
+            font-family: Verdana, Arial, Calibri;
+        }
+
+        #plantilla span.label {
+            font-size: 9pt;
+            font-weight: bold;
+            font-family: Verdana, Arial, Calibri;
+        }
+
+        #plantilla span.sublabel {
+            font-size: 9pt;
+            font-family: Verdana, Arial, Calibri;
+        }
+
+        #plantilla span.comentario {
+            line-height: 1.1em;
+        }
+
+        #plantilla span.data {
+            font-size: 9pt;
+            font-family: Verdana, Arial, Calibri;
+            border-bottom: gray 0.5pt solid;
+            display: inline-block;
+            margin-right: 0.2cm;
+            padding-left: 0.05cm;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        #plantilla div.footnote {
+            margin-top: 0.8cm;
+            font-size: 7pt;
+            font-family: Verdana, Arial, Calibri;
+            color: #999999;
+        }
+
+            #plantilla div.footnote p {
+                margin-top: 2pt;
+                margin-bottom: 2pt;
+            }
+
+        #plantilla span.field {
+            color: #999999;
+            font-size: 10pt;
+            font-family: Verdana, Arial, Calibri;
+            background-color: #c0c0c0;
+        }
+</style>

@@ -1,0 +1,677 @@
+﻿<!DOCTYPE html>
+<html>
+<head>    
+    <title></title>
+
+    <style type="text/css" media="screen, print">
+
+        @font-face {
+            font-family: "MyVerdana";
+            src: url(http://fundacioncidea.com.ar/Plantillas/Verdana.ttf);
+        }
+
+        .h1 {
+            font-family: MyVerdana;
+            color: #CC6600;
+            font-size: small;
+        }
+
+        html {
+            margin: 0px;
+        }
+
+        body {
+            font-family: MyVerdana;
+            font-size: 12pt;
+            margin: 0px;
+        }
+
+        sup {
+            font-size: 7pt;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        .piepagina {
+            font-family: MyVerdana;
+            font-size: 9pt;
+        }
+
+
+
+        #plantilla {
+            /*border: 1px solid #000000;*/
+            width: 20cm;
+            padding: 2px;
+            margin-top: 1cm;
+            margin-bottom: 1cm;
+            margin-left: 2cm;
+            margin-right: 1cm;
+        }
+
+            #plantilla h1 {
+                margin-top: 8pt;
+                margin-bottom: 0pt;
+                font-size: 16pt;
+                font-weight: bold;
+                color: Black;
+                text-align: center;
+            }
+
+            #plantilla h2 {
+                margin-top: 8pt;
+                margin-bottom: 8pt;
+                font-size: 12pt;
+                font-weight: bold;
+                color: Black;
+            }
+
+            #plantilla h3 {
+                margin-top: 12pt;
+                margin-bottom: 8pt;
+                font-size: 12pt;
+                font-weight: bold;
+                color: Black;
+            }
+
+            #plantilla h4 {
+                margin-top: 0pt;
+                margin-bottom: 8pt;
+                font-size: 12pt;
+                font-weight: normal;
+                color: Black;
+            }
+
+            #plantilla ul {
+                margin-top: 8pt;
+                margin-bottom: 8pt;
+                margin-left: 20pt;
+                list-style-type: disc;
+            }
+
+            #plantilla li {
+                margin-top: 4pt;
+                margin-bottom: 4pt;
+            }
+
+            #plantilla ol {
+                margin-left: 0px;
+                list-style-type: decimal;
+                list-style-position: inside;
+            }
+
+                #plantilla ol.letras {
+                    margin-left: 0px;
+                    list-style-type: lower-alpha;
+                    list-style-position: inside;
+                }
+
+            #plantilla p {
+                margin-top: 8pt;
+                margin-bottom: 8pt;
+            }
+
+            #plantilla span.inputField {
+                background-color: #c0c0c0;
+            }
+
+            #plantilla span.important {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
+            #plantilla div.singlecolumn {
+                width: 20cm;
+                padding-right: 15px;
+                text-align: justify;
+            }
+
+            #plantilla div.alineacionDerecha {
+                width: 99%;
+                text-align: right;
+            }
+
+            #plantilla div.alineacionCentrado {
+                width: 99%;
+                text-align: center;
+            }
+
+            #plantilla div.alineacionJustificado {
+                text-align: justify;
+            }
+
+
+            #plantilla div.line {
+                margin-top: 3pt;
+            }
+
+            #plantilla div.lineHeight {
+                margin-top: 3pt;
+                height: 50pt;
+            }
+
+            #plantilla div.headerline {
+                margin-top: 4pt;
+                margin-bottom: 4pt;
+            }
+
+            #plantilla span.headerlabel {
+                font-size: 9pt;
+                font-weight: bold;
+                color: gray;
+                font-family: MyVerdana;
+            }
+
+            #plantilla span.label {
+                font-size: 9pt;
+                font-weight: bold;
+                font-family: MyVerdana;
+            }
+
+            #plantilla span.sublabel {
+                font-size: 9pt;
+                font-family: MyVerdana;
+            }
+
+            #plantilla span.data {
+                font-size: 9pt;
+                font-family: MyVerdana;
+                border-bottom: gray 0.5pt solid;
+                display: inline-block;
+                margin-right: 0.2cm;
+                padding-left: 0.05cm;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            #plantilla div.footnote {
+                margin-top: 0.8cm;
+                font-size: 7pt;
+                font-family: MyVerdana;
+                color: #999999;
+            }
+
+                #plantilla div.footnote p {
+                    margin-top: 2pt;
+                    margin-bottom: 2pt;
+                }
+
+            #plantilla span.field {
+                color: #999999;
+                font-size: 10pt;
+                font-family: MyVerdana;
+                background-color: #c0c0c0;
+            }
+
+        #TablaFirmas {
+            font-size: 12pt;
+            width: 18cm;
+        }
+
+            #TablaFirmas td.celdalabels {
+                font-size: 11pt;
+                width: 14cm;
+                height: 1.3cm;
+            }
+
+            #TablaFirmas td.celdalinea {
+                width: 10cm;
+                height: 1.5cm;
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+                border-bottom-color: #000000;
+            }
+
+            #TablaFirmas td.celdasinlinea {
+                width: 8cm;
+                height: 1.5cm;
+            }
+
+
+        #TablaMiembrosComite {
+            font-size: 10pt;
+            width: 0px;
+            border-collapse: collapse;
+            border: 1px solid #000000;
+        }
+
+            #TablaMiembrosComite td {
+                border: 1px solid #000000;
+                padding: 10px;
+            }
+    </style>
+
+
+
+</head>
+<body>
+    
+    <iframe visibleOnHeader="true" visibleOnFooter="false" height="1px" width="100%">
+        <div style="width: 20cm; text-align: center;">
+            <img src="${Logo}">
+        </div>
+        <br />
+        <div style="width: 20cm; text-align: justify;">
+            <p>
+                ${Estudio} <br />
+                <span>Código: ${CodigoEstudio}. </span>
+                <span>Poatrocinado por: ${PatrocinadoPor}. </span>
+            </p>                
+        </div>
+    </iframe>
+
+    <iframe visibleOnHeader="false" visibleOnFooter="true" height="1px" width="80%">
+        <div class="piepagina" style="width: 20cm; text-align: center;">
+            <p>
+                <span>${TextoPiePagina}</span>
+            </p>
+        </div>    
+    </iframe>
+    
+    <div id="plantilla">
+        <div style="text-align: right;">${FechaEncabezado}</div>
+        <br />
+        <p>
+            <span>${InvestigadorPrincipal}</span><br />
+            <span>Investigador Principal</span><br />
+            <span>De nuestra consideración</span><br />
+            <br />
+            <br />
+        </p>
+        <p>
+            ${Texto1}
+            <br />
+            <strong>Título del protocolo: ${Estudio}</strong>
+            <br />
+            <strong>Patrocinador: </strong>${PatrocinadoPor}
+            <br />
+            <strong>Investigador principal: </strong>${InvestigadorPrincipal}
+            <strong> Matrícula: </strong> ${InvestigadorMatricula}
+            <strong> Datos de contacto: </strong> ${InvestigadorContacto}
+            <strong> Institución donde se desarrollará: </strong> ${CentroHabilitado} &nbsp;
+            ${CentroHabilitadoContacto}  &nbsp;
+            ${Texto_EstudioSubrogado}
+        </p>
+        <p>
+            ${Texto2}
+            <ul>
+                #foreach( $Tipo in $TiposDocumentos )
+                <li>
+                    <span> ${Tipo.TipoDocumento} </span>
+
+                    #if( ${Tipo.ListarDocumentos} == 'SI' )
+                    <ul>
+                        #foreach( $Documento in $Tipo.Documentos )
+                        <li>
+                            <span> ${Documento.Documento} </span>
+                        </li>
+                        #end
+                    </ul>
+                    #end
+                </li>
+                #end
+            </ul>
+        </p>
+        <p>
+            ${TextoLibreCartaRespuesta}
+        </p>
+        <p>
+            ${Texto3} &nbsp; ${TipoEstudio_Texto1}
+            <br />
+            ${Texto4}
+            <br />
+            ${TipoEstudio_Texto2}
+            <br />
+            ${TipoEstudio_Texto3}
+            <br />
+            #foreach( $Centro in $CentrosInternacion )
+            <span style="text-decoration: underline;"> ${Centro.Descripcion}: </span> ${Centro.DatosContacto}
+            <br />
+            #end
+        </p>
+        <p style="page-break-before: auto; text-decoration: underline;">
+            ${Texto5}
+        </p>
+        <p>
+            ${Texto6}
+            <br />
+            ${Texto7}
+
+            <ul>
+                #foreach( $TipoSeEvalua in $TiposDocumentosSeEvalua )
+                <li>
+                    <span> ${TipoSeEvalua.TipoDocumento} </span>
+                    <ul>
+                        #foreach( $Documento in $TipoSeEvalua.Documentos )
+                        <li>
+                            <span> ${Documento.Documento} </span>
+                        </li>
+                        #end
+                    </ul>
+                </li>
+                #end
+            </ul>
+        </p>
+        <p>
+            ${Texto8}
+        </p>
+
+        <p style="page-break-before: always;">&nbsp;</p>
+
+        <table id="TablaFirmas" cellspacing="0" style="page-break-before: auto;">
+            <tr>
+                <td class=" celdalabels"><p>PRESIDENTE:</p></td>
+            <td class="celdasinlinea"><p>&nbsp;</p></td>
+            </tr>
+            <tr>
+                <td class="celdalabels"><p>${PresidenteComite}</p></td>
+                <td class="celdalinea"><p>&nbsp;</p></td>
+            </tr>
+            <tr>
+                <td class="celdalabels"><p>VOCALES:</p></td>
+                <td class="celdasinlinea"><p>&nbsp;</p></td>
+            </tr>
+            #foreach( $Vocal in $Vocales )
+            <tr>
+                <td class="celdalabels"><p>${Vocal}</p></td>
+                <td class="celdalinea"><p>&nbsp;</p></td>
+            </tr>
+            #end
+        </table>
+
+        <p style="page-break-before: always;">Listado de los miembros del CEI al ${FechaActa}</p>        
+        
+        <table id="TablaMiembrosComite" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td style="width:31px"></td>
+                    <td style="width:200px">
+                        <strong>Apellido y Nombre</strong>
+                    </td>
+                    <td style="width:85px">
+                        <strong>Fecha Nacimiento</strong>
+                    </td>
+                    <td style="width:38px">
+                        <strong>Sexo</strong>
+                    </td>
+                    <td style="width:104px">
+                        <strong>Ocupaci&oacute;n</strong>
+                    </td>
+                    <td style="width:85px">
+                        <strong>Relaci&oacute;n con instituci&oacute;n</strong>
+                    </td>
+                    <td style="width:71px">
+                        <strong>Posici&oacute;n en el CEI</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        1
+                    </td>
+                    <td style="width:200px">
+                        Dr. ClaudioFabi&aacute;n Bargas Modernell
+                    </td>
+                    <td style="width:85px">
+                        09/11/1971
+                    </td>
+                    <td style="width:38px">
+                        M
+                    </td>
+                    <td style="width:104px">
+                        Abogado
+                    </td>
+                    <td style="width:85px">
+                        SI
+                    </td>
+                    <td style="width:71px">
+                        Presidente
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        2
+                    </td>
+                    <td style="width:200px">
+                        Dr. Fernando Andr&eacute;s D&iacute;az Couselo (1)
+                    </td>
+                    <td style="width:85px">
+                        15/06/1968
+                    </td>
+                    <td style="width:38px">
+                        M
+                    </td>
+                    <td style="width:104px">
+                        <p style="margin-left:3.45pt">M&eacute;dico Cl&iacute;nico y Farmac&oacute;logo
+                    </td>
+                    <td style="width:85px">
+                        SI
+                    </td>
+                    <td style="width:71px">
+                        <p style="margin-left:3.45pt">Vocal Titular
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        3
+                    </td>
+                    <td style="width:200px">
+                        Ver&oacute;nica Moderc
+                    </td>
+                    <td style="width:85px">
+                        14/01/1967
+                    </td>
+                    <td style="width:38px">
+                        F
+                    </td>
+                    <td style="width:104px">
+                        Bioqu&iacute;mica Farmac&eacute;utica
+                    </td>
+                    <td style="width:85px">
+                        NO
+                    </td>
+                    <td style="width:71px">
+                        Vocal Titular
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        4
+                    </td>
+                    <td style="width:200px">
+                        Dra. Diana Levi
+                    </td>
+                    <td style="width:85px">
+                        30/04/1951
+                    </td>
+                    <td style="width:38px">
+                        F
+                    </td>
+                    <td style="width:104px">
+                        M&eacute;dica gastroenter&oacute;loga
+                    </td>
+                    <td style="width:85px">
+                        NO
+                    </td>
+                    <td style="width:71px">
+                        Vocal Titular
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        5
+                    </td>
+                    <td style="width:200px">
+                        Dra. Gabriela Marechal
+                    </td>
+                    <td style="width:85px">
+                        3/12/1977
+                    </td>
+                    <td style="width:38px">
+                        F
+                    </td>
+                    <td style="width:104px">
+                        M&eacute;dica onc&oacute;loga
+                    </td>
+                    <td style="width:85px">
+                        NO
+                    </td>
+                    <td style="width:71px">
+                        Vocal Suplente
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        6
+                    </td>
+                    <td style="width:200px">
+                        Sr. Nicol&aacute;s Alscher (2)
+                    </td>
+                    <td style="width:85px">
+                        27/4/1996
+                    </td>
+                    <td style="width:38px">
+                        M
+                    </td>
+                    <td style="width:104px">
+                        Estudiante de Ingenieria Civil
+                    </td>
+                    <td style="width:85px">
+                        NO
+                    </td>
+                    <td style="width:71px">
+                        Vocal Titular
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        7
+                    </td>
+                    <td style="width:200px">
+                        Dra. M&oacute;nica De Gennaro
+                    </td>
+                    <td style="width:85px">
+                        18/11/1958
+                    </td>
+                    <td style="width:38px">
+                        F
+                    </td>
+                    <td style="width:104px">
+                        M&eacute;dica
+                    </td>
+                    <td style="width:85px">
+                        SI
+                    </td>
+                    <td style="width:71px">
+                        Vocal Suplente
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        8
+                    </td>
+                    <td style="width:200px">
+                        Dr.Nazareno Riolfi
+                    </td>
+                    <td style="width:85px">
+                        14/4/1984
+                    </td>
+                    <td style="width:38px">
+                        M
+                    </td>
+                    <td style="width:104px">
+                        M&eacute;dico
+                    </td>
+                    <td style="width:85px">
+                        NO
+                    </td>
+                    <td style="width:71px">
+                        Vocal Suplente
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        9
+                    </td>
+                    <td style="width:200px">
+                        Srta. Mar&iacute;a Bel&eacute;n Riquelme
+                    </td>
+                    <td style="width:85px">
+                        27/4/1993
+                    </td>
+                    <td style="width:38px">
+                        F
+                    </td>
+                    <td style="width:104px">
+                        Bioqu&iacute;mica
+                    </td>
+                    <td style="width:85px">
+                        NO
+                    </td>
+                    <td style="width:71px">
+                        Vocal Titular
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        10
+                    </td>
+                    <td style="width:200px">
+                        Dra.Carina Budansky(2)
+                    </td>
+                    <td style="width:85px">
+                        31/1/1974
+                    </td>
+                    <td style="width:38px">
+                        F
+                    </td>
+                    <td style="width:104px">
+                        Abogada
+                    </td>
+                    <td style="width:85px">
+                        NO
+                    </td>
+                    <td style="width:71px">
+                        Vocal Suplente
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:31px">
+                        11
+                    </td>
+                    <td style="width:200px">
+                        Srta. Mar&iacute;a Florencia Palmas
+                    </td>
+                    <td style="width:85px">
+                        25/01/1984
+                    </td>
+                    <td style="width:38px">
+                        F
+                    </td>
+                    <td style="width:104px">
+                        Periodista
+                    </td>
+                    <td style="width:85px">
+                        SI
+                    </td>
+                    <td style="width:71px">
+                        Vocal Titular
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        (1)Cumple funciones de metod&oacute;logo; (2) Miembro de la comunidad
+
+
+    </div>
+
+
+</body>
+</html>

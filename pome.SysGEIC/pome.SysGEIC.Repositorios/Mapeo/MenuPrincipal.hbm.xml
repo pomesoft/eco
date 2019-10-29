@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="pome.SysGEIC.Entidades.MenuPrincipal" table="MenuPrincipal" lazy="false">
+    <id name="Id" column="IdMenuPrincipal">
+      <generator class="identity" />
+    </id>    
+    <property name="Orden" column="Orden" />
+    <property name="Texto" column="Texto" />
+    <property name="Descripcion" column="Descripcion" />
+    <property name="NavigateURL" column="NavigateURL" />
+    <property name="Activo" column="Activo" />
+    <bag name="Items" inverse="true" cascade="all-delete-orphan">
+      <key column="IdMenuPrincipal" />
+      <one-to-many class="pome.SysGEIC.Entidades.MenuSecundario" />
+    </bag>
+  </class>
+</hibernate-mapping>

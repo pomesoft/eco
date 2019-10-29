@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.ActaEstudio" table="ActaEstudios" lazy="false">
+        <id name="Id" column="IdActaEstudio">
+            <generator class="identity" />
+        </id>
+        <many-to-one name="Acta" column="IdActa" class="pome.SysGEIC.Entidades.Acta" />
+        <many-to-one name="Estudio" column="IdEstudio" class="pome.SysGEIC.Entidades.Estudio" />
+        <property name="OrdenEstudio" column="OrdenEstudio" />
+        <many-to-one name="EstadoEstudio" column="IdEstadoEstudio" class="pome.SysGEIC.Entidades.EstadoEstudio" />
+        <many-to-one name="CartaRespuestaModelo" column="IdCartaRespuestaModelo" class="pome.SysGEIC.Entidades.CartaRespuestaModelo" />
+        <property name="TextoLibreCartaRespuesta" type="StringClob">
+            <column name="TextoLibreCartaRespuesta" sql-type="NTEXT" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>

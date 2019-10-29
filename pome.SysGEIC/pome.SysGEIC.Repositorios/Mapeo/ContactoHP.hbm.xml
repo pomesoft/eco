@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.ContactoHP" table="ContactosHP" lazy="false">
+        <id name="Id" column="IdContactoHP">
+            <generator class="identity" />
+        </id>
+        <property name="Fecha" column="Fecha" />
+        <property name="Email" column="Email" />
+        <property name="Telefono" column="Telefono" />
+        <property name="Nombre" column="Nombre" />
+        <property name="Comite" column="Comite" />
+        <property name="Mensaje" column="Mensaje" />
+        
+    </class>
+</hibernate-mapping>

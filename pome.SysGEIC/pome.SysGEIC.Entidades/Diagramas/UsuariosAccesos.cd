@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="pome.SysGEIC.Entidades.Usuario" Collapsed="true">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAEBAAggABAAABAAQAAIIAAAQAAACA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TipoUsuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.UsuarioAcceso" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>UsuarioAcceso.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Usuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.TipoUsuario" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TipoUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.NivelAcceso" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NivelAcceso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.MenuPrincipal" Collapsed="true">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MenuPrincipal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.MenuSecundario" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MenuSecundario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Menu" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.EntidadAcceso" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <AssociationLine Name="MenuPrincipal" Type="pome.SysGEIC.Entidades.MenuPrincipal" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="2.346" />
+        <Point X="6.875" Y="2.346" />
+        <Point X="6.875" Y="1.625" />
+        <Point X="7.75" Y="1.625" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="MenuSecundario" Type="pome.SysGEIC.Entidades.MenuSecundario" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="2.55" />
+        <Point X="6.875" Y="2.55" />
+        <Point X="6.875" Y="3.062" />
+        <Point X="7.75" Y="3.062" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.195" Y="-0.296" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAADAAAAAA=</HashCode>
+      <FileName>EntidadAcceso.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MenuPrincipal" />
+      <Property Name="MenuSecundario" />
+      <Property Name="NivelAcceso" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.TipoUsuarioAcceso" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TipoUsuarioAcceso.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TipoUsuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

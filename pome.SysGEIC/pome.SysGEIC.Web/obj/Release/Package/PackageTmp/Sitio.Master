@@ -1,0 +1,219 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sitio.master.cs" Inherits="pome.SysGEIC.Web.Sitio" %>
+
+<%@ Register Src="Controles/MenuControl.ascx" TagName="MenuControl" TagPrefix="uc1" %>
+<%@ Register Src="Controles/RecordatoriosPopupControl.ascx" TagName="RecordatoriosPopupControl"
+    TagPrefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ECO</title>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="js/easyui-lang-es.js" type="text/javascript"></script>
+    <script src="js_page/Utiles.js" type="text/javascript"></script>
+    <script src="js_page/UtilesAJAX.js" type="text/javascript"></script>
+
+    <link href="css/Estilo.css" rel="stylesheet" type="text/css" />
+    <link href="css/default/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="css/icon.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/sb-admin-2.css" rel="stylesheet" />
+    <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" />
+    <script src="js/sb-admin-2.js" type="text/javascript"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+    <script src="js_page/RecordatoriosPopup.js" type="text/javascript"></script>
+    <script src="js_page/MantenimientoSession.js" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <!-- -->
+            <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark pt-2" id="accordionSidebar">
+                <!-- Sidebar - Brand -->
+
+                <li class="nav-item">
+                    <a href="Panelprincipal.aspx" class="nav-link">
+                        <i class="fas fa-fw fa-chart-line"></i>
+                        <span>Panel Principal</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="BandejaInicio.aspx" class="nav-link">
+                        <i class="fas fa-fw fa-file-alt"></i>
+                        <span>Estudios</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="BandejaInicioActas.aspx" class="nav-link">
+                        <i class="fas fa-fw fa-file-alt"></i>
+                        <span>Actas</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="ActaCargaDocumentosV2.aspx" class="nav-link">
+                        <i class="fas fa-fw fa-file-medical"></i>
+                        <span>Recepción de Documentos</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="BandejaRecordatorios.aspx" class="nav-link">
+                        <i class="fas fa-fw fa-exclamation-circle"></i>
+                        <span>Recordatorios</span></a>
+                </li>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <li class="nav-item">
+                    <a href="CartaRespuestaModelo.aspx" class="nav-link">
+                        <i class="fas fa-fw fa-file-alt"></i>
+                        <span>Cartas de Respuesta</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="Plantillas.aspx" class="nav-link">
+                        <i class="fas fa-fw fa-file-alt"></i>
+                        <span>Plantillas de Texto</span></a>
+                </li>
+
+
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <!-- Nav Item - Configuracion -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseConfiguracion" aria-expanded="true" aria-controls="collapseConfiguracion">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span>Configuración</span>
+                    </a>
+                    <div id="collapseConfiguracion" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-gray-300 py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="EstadosEstudio.aspx">Estados de Estudios</a>
+                            <a class="collapse-item" href="TiposDocumento.aspx">Tipos de Documentos</a>
+                            <a class="collapse-item" href="EstadosDocumentos.aspx">Estados de Documentos</a>
+                            <a class="collapse-item" href="TiposRecordatorio.aspx">Tipos de Recordatorios</a>
+                            <a class="collapse-item" href="LisasEmails.aspx">Listas de Correo</a>
+                            <a class="collapse-item" href="Profesionales.aspx">Profesionales</a>
+                            <a class="collapse-item" href="Centros.aspx">Centros Habilitados</a>
+                            <a class="collapse-item" href="Monodrogas.aspx">Monodrogas</a>
+                            <a class="collapse-item" href="Patrocinadores.aspx">Patrocinadores</a>
+                            <a class="collapse-item" href="Patologias.aspx">Patologías</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Seguridad -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseSeguridad" aria-expanded="true" aria-controls="collapseSeguridad">
+                        <i class="fas fa-fw fa-user-lock"></i>
+                        <span>Seguridad del Sistema</span>
+                    </a>
+                    <div id="collapseSeguridad" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-gray-300 py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="Usuarios.aspx">Usuarios</a>
+                            <a class="collapse-item" href="TiposUsuario.aspx">Tipos de Usuarios</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="CambiarClave.aspx" class="nav-link">
+                        <i class="fas fa-fw fa-key"></i>
+                        <span>Cambiar Contraseña</span></a>
+                </li>
+            </ul>
+            <!-- End of Sidebar -->
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+                        <div id="Encabezado" class="bg-white topbar mb-3 static-top shadow">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div id="Logo">
+                                        <img src="img/LogoSitio.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-5 pt-3">
+                                    <a id="btnMostrarPopupRecordatorios" href="#" onclick="mostrarPopupRecordatorios();">
+                                        <asp:Image ID="imgIconoAlertaProncipal" runat="server" ImageUrl="img/alertRojo.png"
+                                            Style="cursor: pointer;" />
+                                    </a>
+                                </div>
+                                <div class="col-md-2 pt-3">
+                                    <div class="row">
+                                        <span>
+                                            <asp:Label ID="lblUsuarioLogin" runat="server" Text=""></asp:Label></span>
+                                    </div>
+                                    <div class="row">
+                                        <asp:LinkButton ID="btnCerrarSesión" runat="server" class="easyui-linkbutton" iconCls="icon-no"
+                                            plain="true" OnClick="btnCerrarSesión_Click">Cerrar sesión</asp:LinkButton>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="ContenedorBody">
+                            <asp:ContentPlaceHolder ID="ContentPlaceBody" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+
+
+                        <div id="dlgCargandoSite" class="easyui-dialog" style="width: 600px; height: 180px; padding: 30px 20px"
+                            closed="true" modal="true">
+                            <div class="ftitle">
+                                <img src="../img/Loader.gif" />
+                                Cargando...
+                            </div>
+                        </div>
+
+                        <div id="panelRecordatoriosPopup">
+                            <uc2:RecordatoriosPopupControl ID="RecordatoriosPopupControl1" runat="server" />
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <%--<span>Copyright &copy; <img src="assets\img\logoPMS.png">
+                        </span>--%>
+                    </div>
+                </div>
+        </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+
+    </form>
+
+</body>
+</html>

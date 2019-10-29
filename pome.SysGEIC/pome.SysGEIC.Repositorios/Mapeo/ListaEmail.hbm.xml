@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.ListaEmail" table="ListaEmail" lazy="false">
+        <id name="Id" column="IdListaEmail">
+            <generator class="identity" />
+        </id>
+        <many-to-one name="ListaEmails" column="IdListasEmails" class="pome.SysGEIC.Entidades.ListaEmails" />
+        <many-to-one name="Email" column="IdEmail" class="pome.SysGEIC.Entidades.Email" cascade="all-delete-orphan"/>
+    </class>
+</hibernate-mapping>

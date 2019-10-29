@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.Parametro" table="Parametros" lazy="false">
+        <id name="Id" column="IdParametro">
+            <generator class="identity" />
+        </id>
+        <property name="Descripcion" column="Descripcion" />
+        <property name="Valor" column="Valor" />
+        <property name="Vigente" column="Vigente" />
+    </class>
+</hibernate-mapping>

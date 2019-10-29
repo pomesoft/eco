@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.TipoDocumentoFlujoEstado" table="TipoDocumentoFlujoEstados" lazy="false">
+        <id name="Id" column="IdFlujoEstado">
+            <generator class="identity" />
+        </id>
+        <many-to-one name="TipoDocumentoFlujo" column="IdFlujo" class="pome.SysGEIC.Entidades.TipoDocumentoFlujo" />
+        <many-to-one name="Estado" column="IdEstado" class="pome.SysGEIC.Entidades.EstadoDocumento" />
+        <many-to-one name="EstadoPadre" column="IdEstadoPadre" class="pome.SysGEIC.Entidades.EstadoDocumento" />
+        <property name="Final" column="Final" />
+    </class>
+</hibernate-mapping>

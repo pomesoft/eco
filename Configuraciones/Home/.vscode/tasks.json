@@ -1,0 +1,17 @@
+{
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Chrome",
+                "type": "process",
+                "command": "chrome.exe",
+                "windows": {
+                    "command": "C:\\Users\\Usuario\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\chrome.exe"
+                },
+                "args": [
+                    "${file}"
+                ],
+                "problemMatcher": []
+            }
+        ]
+    }

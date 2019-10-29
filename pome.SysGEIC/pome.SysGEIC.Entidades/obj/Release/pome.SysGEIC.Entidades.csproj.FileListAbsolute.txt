@@ -1,0 +1,10 @@
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Entidades\bin\Release\pome.SysGEIC.Entidades.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Entidades\bin\Release\pome.SysGEIC.Entidades.pdb
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Entidades\obj\Release\pome.SysGEIC.Entidades.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Entidades\obj\Release\pome.SysGEIC.Entidades.pdb
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.Entidades\obj\Release\pome.SysGEIC.Entidades.csprojResolveAssemblyReference.cache
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Entidades\bin\Release\pome.SysGEIC.Entidades.dll
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Entidades\bin\Release\pome.SysGEIC.Entidades.pdb
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Entidades\obj\Release\pome.SysGEIC.Entidades.csprojResolveAssemblyReference.cache
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Entidades\obj\Release\pome.SysGEIC.Entidades.dll
+C:\Proyectos\ECO\pome.SysGEIC\pome.SysGEIC.Entidades\obj\Release\pome.SysGEIC.Entidades.pdb

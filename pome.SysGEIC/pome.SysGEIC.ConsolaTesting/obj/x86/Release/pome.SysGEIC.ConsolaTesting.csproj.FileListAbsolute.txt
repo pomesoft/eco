@@ -1,0 +1,16 @@
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\Hibernate.cfg.xml
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\pome.SysGEIC.ConsolaTesting.exe
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\pome.SysGEIC.ConsolaTesting.pdb
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\pome.SysGEIC.Entidades.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\pome.SysGEIC.Repositorios.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\NHibernate.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\Iesi.Collections.dll
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\pome.SysGEIC.Entidades.pdb
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\pome.SysGEIC.Repositorios.pdb
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\NHibernate.pdb
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\NHibernate.xml
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\Iesi.Collections.pdb
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\bin\Release\Iesi.Collections.xml
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\obj\x86\Release\pome.SysGEIC.ConsolaTesting.exe
+C:\Proyectos\CIDEA\pome.SysGEIC\pome.SysGEIC.ConsolaTesting\obj\x86\Release\pome.SysGEIC.ConsolaTesting.pdb

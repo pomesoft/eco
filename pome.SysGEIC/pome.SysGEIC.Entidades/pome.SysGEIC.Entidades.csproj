@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FE8E54F-4B7E-4078-A911-5353B5C7FC21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pome.SysGEIC.Entidades</RootNamespace>
+    <AssemblyName>pome.SysGEIC.Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acta.cs" />
+    <Compile Include="ActaDocumento.cs" />
+    <Compile Include="ActaEstudio.cs" />
+    <Compile Include="ActaProfesional.cs" />
+    <Compile Include="CartaRespuestaModelo.cs" />
+    <Compile Include="Centro.cs" />
+    <Compile Include="Constantes.cs" />
+    <Compile Include="ContactoHP.cs" />
+    <Compile Include="DocumentoVersionParticipante.cs" />
+    <Compile Include="Documento.cs" />
+    <Compile Include="DocumentoVersion.cs" />
+    <Compile Include="DocumentoVersionComentario.cs" />
+    <Compile Include="DocumentoVersionEstado.cs" />
+    <Compile Include="DocumentoVersionRecordatorio.cs" />
+    <Compile Include="DTO\ActaDocumentoDTO.cs" />
+    <Compile Include="DTO\ActaDocumentoJsonDTO.cs" />
+    <Compile Include="DTO\ActaDTO.cs" />
+    <Compile Include="DTO\ActaEstudioDTO.cs" />
+    <Compile Include="DTO\ActaOrdenDocumentosJsonDTO.cs" />
+    <Compile Include="DTO\DocumentoDTO.cs" />
+    <Compile Include="DTO\EstudioDTO.cs" />
+    <Compile Include="DTO\EstudioRecordatoriosDTO.cs" />
+    <Compile Include="DTO\MenuDTO.cs" />
+    <Compile Include="DTO\NotaDTO.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="EntidadAcceso.cs" />
+    <Compile Include="EntidadBase.cs" />
+    <Compile Include="EntidadBaseParametrica.cs" />
+    <Compile Include="Equipo.cs" />
+    <Compile Include="EstadoRecordatorio.cs" />
+    <Compile Include="EstudioCentro.cs" />
+    <Compile Include="EstudioMonodroga.cs" />
+    <Compile Include="EstudioParticipante.cs" />
+    <Compile Include="EstudioPatrocinador.cs" />
+    <Compile Include="EstudioTipoDocumento.cs" />
+    <Compile Include="ItemChart.cs" />
+    <Compile Include="ListaEmail.cs" />
+    <Compile Include="ListaEmails.cs" />
+    <Compile Include="Nota.cs" />
+    <Compile Include="NotaDocumento.cs" />
+    <Compile Include="Parametro.cs" />
+    <Compile Include="Plantilla.cs" />
+    <Compile Include="Recordatorio.cs" />
+    <Compile Include="RecordatorioDocumento.cs" />
+    <Compile Include="RecordatorioInfoMail.cs" />
+    <Compile Include="RolComite.cs" />
+    <Compile Include="TipoDocumentoFlujo.cs" />
+    <Compile Include="TipoDocumentoFlujoEstado.cs" />
+    <Compile Include="IntegranteEquipo.cs" />
+    <Compile Include="EstadoDocumento.cs" />
+    <Compile Include="EstadoEstudio.cs" />
+    <Compile Include="Estudio.cs" />
+    <Compile Include="MenuBase.cs" />
+    <Compile Include="MenuSecundario.cs" />
+    <Compile Include="MenuPrincipal.cs" />
+    <Compile Include="Monodroga.cs" />
+    <Compile Include="NivelAcceso.cs" />
+    <Compile Include="Patologia.cs" />
+    <Compile Include="Patrocinador.cs" />
+    <Compile Include="Profesional.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rol.cs" />
+    <Compile Include="TipoDocumento.cs" />
+    <Compile Include="TipoDocumentoGrupo.cs" />
+    <Compile Include="TipoDocumentoRecordatorio.cs" />
+    <Compile Include="TipoEstudio.cs" />
+    <Compile Include="TipoPlantilla.cs" />
+    <Compile Include="TipoProfesional.cs" />
+    <Compile Include="TipoRecordatorio.cs" />
+    <Compile Include="TipoUsuario.cs" />
+    <Compile Include="TipoUsuarioAcceso.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioAcceso.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagramas\Acta.cd" />
+    <None Include="Diagramas\ActaDTO.cd" />
+    <None Include="Diagramas\Documento.cd" />
+    <None Include="Diagramas\Estudio.cd" />
+    <None Include="Diagramas\Recordatorio.cd" />
+    <None Include="Diagramas\UsuariosAccesos.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

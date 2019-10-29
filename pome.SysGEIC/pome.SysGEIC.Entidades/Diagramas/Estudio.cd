@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="pome.SysGEIC.Entidades.Estudio" Collapsed="true">
+    <Position X="7" Y="3.5" Width="2.25" />
+    <AssociationLine Name="Patologia" Type="pome.SysGEIC.Entidades.Patologia" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="3.5" />
+        <Point X="7.25" Y="2.846" />
+        <Point X="4.5" Y="2.846" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.062" Y="0.132" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Patrocinadores" Type="pome.SysGEIC.Entidades.EstudioPatrocinador" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.723" Y="3.5" />
+        <Point X="7.723" Y="2.097" />
+        <Point X="5.75" Y="2.097" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.262" Y="0.088" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Monodrogas" Type="pome.SysGEIC.Entidades.EstudioMonodroga" FixedFromPoint="true">
+      <Path>
+        <Point X="8.446" Y="3.5" />
+        <Point X="8.446" Y="1.191" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="CentrosHabilitados" Type="pome.SysGEIC.Entidades.EstudioCentro" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="3.813" />
+        <Point X="6.625" Y="3.813" />
+        <Point X="6.625" Y="3.812" />
+        <Point X="5.25" Y="3.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Documentos" Type="pome.SysGEIC.Entidades.Documento" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="4.191" />
+        <Point X="8" Y="5.798" />
+        <Point X="8.25" Y="5.798" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.193" Y="-0.257" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Participantes" Type="pome.SysGEIC.Entidades.EstudioParticipante" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="4.191" />
+        <Point X="7.25" Y="5.346" />
+        <Point X="6.25" Y="5.346" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>JBgSUhAAQQGCAQAEQAAAAohAQIIAIRAAAAKAMAQAAAg=</HashCode>
+      <FileName>Estudio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Patologia" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Patrocinadores" />
+      <Property Name="Monodrogas" />
+      <Property Name="CentrosHabilitados" />
+      <Property Name="Documentos" />
+      <Property Name="Notas" />
+      <Property Name="Participantes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Documento" Collapsed="true">
+    <Position X="8.25" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQQCuAEEAAAEAAAAAAAgIQAAICgBQAAAAQQAAAAAAA=</HashCode>
+      <FileName>Documento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Patologia" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Patologia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Usuario" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAEBAAggABAAABAAQAAIAAAAQAAACI=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.EstadoEstudio" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAUAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EstadoEstudio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Patrocinador" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Patrocinador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Monodroga" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Monodroga.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Equipo" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAQAAAAAAAAQCAAA=</HashCode>
+      <FileName>Equipo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Integrantes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Profesional" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAgABAAAAAAQAAAAAAAABAACQ=</HashCode>
+      <FileName>Profesional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.IntegranteEquipo" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <AssociationLine Name="Profesional" Type="pome.SysGEIC.Entidades.Profesional">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0" Y="0.109" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Rol" Type="pome.SysGEIC.Entidades.Rol">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.22" Y="0.074" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEEAAAAAAAAAAAAEwAAAAAAAAAAACA=</HashCode>
+      <FileName>IntegranteEquipo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Profesional" />
+      <Property Name="Rol" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Rol" Collapsed="true">
+    <Position X="1.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Centro" Collapsed="true">
+    <Position X="2.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Centro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.EstudioPatrocinador" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAAAAAQAAAAACA=</HashCode>
+      <FileName>EstudioPatrocinador.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Patrocinador" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.EstudioMonodroga" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAACA=</HashCode>
+      <FileName>EstudioMonodroga.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Monodroga" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.EstudioCentro" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <AssociationLine Name="Centro" Type="pome.SysGEIC.Entidades.Centro" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="3.812" />
+        <Point X="3" Y="3.812" />
+        <Point X="3" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAABAAAAAAAAAAAAAAAQAAABAAAAQAAAAAQAAAAACA=</HashCode>
+      <FileName>EstudioCentro.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Centro" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Nota" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <AssociationLine Name="Acta" Type="pome.SysGEIC.Entidades.Acta" FixedToPoint="true">
+      <Path>
+        <Point X="10.062" Y="2.441" />
+        <Point X="10.062" Y="4" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAlAAAAEACCEQAAAAAQAABYgAAQAAAAAQYAAAAAA=</HashCode>
+      <FileName>Nota.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Acta" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Documentos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.NotaDocumento" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>NotaDocumento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DocumentoVersion" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.EstudioParticipante" Collapsed="true">
+    <Position X="4.5" Y="5" Width="1.75" />
+    <Members>
+      <Property Name="Estudio" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Profesional" Type="pome.SysGEIC.Entidades.Profesional" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.594" Y="5.691" />
+        <Point X="5.594" Y="6.688" />
+        <Point X="2" Y="6.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAABAAAAAAAAAEAAAAAQABABAAAAwAAAAAQAAAAAAA=</HashCode>
+      <FileName>EstudioParticipante.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Estudio" />
+      <Property Name="Profesional" />
+      <Property Name="Rol" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.DocumentoVersion" Collapsed="true">
+    <Position X="12.5" Y="5.5" Width="2.5" />
+    <AssociationLine Name="Comentarios" Type="pome.SysGEIC.Entidades.DocumentoVersionComentario">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.207" Y="0.096" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAoAAAAEAUgAAAAA0AACmAEAQACAAAAMAAAAAA=</HashCode>
+      <FileName>DocumentoVersion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Documento" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Estados" />
+      <Property Name="Comentarios" />
+      <Property Name="Recordatorios" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.DocumentoVersionComentario" Collapsed="true">
+    <Position X="13.75" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAEAAAAAAQAEAAAAAQAAAAAAAAAIAAA=</HashCode>
+      <FileName>DocumentoVersionComentario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.DocumentoVersionEstado" Collapsed="true">
+    <Position X="10.75" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAEAAAAAAaAEAAAAAQAAAAAEAACIAAg=</HashCode>
+      <FileName>DocumentoVersionEstado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.DocumentoVersionRecordatorio" Collapsed="true">
+    <Position X="12" Y="8.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAEAAAAAAQAEAAAAAQAAAAAAAAAIAQA=</HashCode>
+      <FileName>DocumentoVersionRecordatorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.ActaDocumento" Collapsed="true">
+    <Position X="12.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAkAQAQAEACAQAIAAAAgQgqAAAQIAAFQAIAAQAAA=</HashCode>
+      <FileName>ActaDocumento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DocumentoVersion" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.Acta" Collapsed="true">
+    <Position X="9.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAUhAAIAFCAAEAQAAAgYAAAcAgAQBAAAABIAQAAAA=</HashCode>
+      <FileName>Acta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Documentos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="pome.SysGEIC.Entidades.ActaProfesional" Collapsed="true">
+    <Position X="12.5" Y="2.75" Width="1.5" />
+    <AssociationLine Name="Acta" Type="pome.SysGEIC.Entidades.Acta" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.5" Y="3.347" />
+        <Point X="10.812" Y="3.347" />
+        <Point X="10.812" Y="4" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAIAAAAAA=</HashCode>
+      <FileName>ActaProfesional.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Acta" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

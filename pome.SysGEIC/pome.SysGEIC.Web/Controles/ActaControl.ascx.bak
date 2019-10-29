@@ -1,0 +1,198 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ActaControl.ascx.cs"
+    Inherits="pome.SysGEIC.Web.Controles.ActaControl" %>
+<%@ Register src="PlantillaSeleccionControl.ascx" tagname="PlantillaSeleccionControl" tagprefix="uc1" %>
+<%@ Register src="NotaControl.ascx" tagname="NotaControl" tagprefix="uc2" %>
+<div id="toolbar" style="padding: 3px; width: 1190px; border: 1px solid #ccc">
+    <a href="#" id="btnActaGuardar" class="easyui-linkbutton" iconcls="icon-ok" plain="true" onclick="guardarActa()">
+        Guardar</a> 
+    <a href="#" id="btnActaImprimirActa" class="easyui-linkbutton" iconcls="icon-view" plain="true">
+        Imprimir Acta</a> 
+    <a href="#" id="btnActaVolver" class="easyui-linkbutton" iconcls="icon-back" plain="true" onclick="volver()">
+        Volver</a>
+</div>
+<div id="panelIzquierdo" class="contenedorControlesMitad">
+    <div class="panel datagrid" style="height: 520px; width: 588px; border: 1px solid gray;
+        padding-bottom: 2px;">
+        <div class="panel-header " style="width: 590px;">
+            <div class="panel-title">
+                Acta</div>
+        </div>
+        <div class="fitem">
+            <label for="Fecha">Fecha:</label>
+            <input class="easyui-datebox" id="txtActaFecha" name="Fecha" data-options="formatter:formatterDateBox, parser:parserDateBox"></input>
+                Hora:<input class="easyui-timespinner" id="txtActaHora" style="width:60px;"/>  
+        </div>
+        <div class="fitem">
+            <label for="Descripcion">
+                Descripción:</label>
+            <input class="easyui-validatebox campoABMLargo" type="text" id="txtActaDescripcion"
+                name="Descripcion"></input>
+        </div>
+        <div class="fitem">
+            <label for="Cerrada">
+                Cerrada:</label>
+            <input type="checkbox" id="chkCerrada" name="Cerrada" />
+        </div>        
+        <div id="panelComentarioInicial">
+            <textarea class="campoTextArea" id="txtActaComentarioInicial"
+                name="ComentarioInicial" cols="20" rows="50" style="width: 580px; height: 100%;"></textarea>
+        </div>
+        <div id="panelComentarioFinal">
+            <textarea class="campoTextArea" id="txtActaComentarioFinal" name="ComentarioFinal"
+                cols="20" rows="5" style="width: 580px; height: 100%;"></textarea>
+        </div>
+        <table id="dgActaParticipantes">
+        </table>
+    </div>
+</div>
+
+<%--<div id="panelDerecho" class="contenedorControlesMitad">
+    <table id="dgActaDocumentos">
+    </table>
+    <table id="dgNotasTratadas">
+    </table>
+</div>--%>
+
+<div id="panelDerecho" class="easyui-accordion contenedorControlesMitad">        
+    <div Title="Documentos tratados en la reunión" data-options="selected:true">
+        <table id="dgActaDocumentos">
+		    </table>
+    </div>
+    <div Title="Notas tratadas en la reunión">            
+		    <table id="dgNotasTratadas">
+		    </table>
+    </div>
+</div>
+
+<div id="dlgActaSeleccionParticipantes" class="easyui-dialog" style="width: 550px;
+    height: 300px; padding: 10px 20px" closed="true" modal="true" buttons="#dlgActaSeleccionParticipantes-buttons">
+    <table id="dgActaSeleccionParticipantes">
+    </table>
+</div>
+<div id="dlgActaSeleccionParticipantes-buttons">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-ok" onclick="aceptarActaSeleccionParticipantes()">
+        Aceptar</a>
+</div>
+
+<div id="dlgActaDocumento" class="easyui-dialog" style="width: 660px; height: 460px;
+    padding: 10px 20px" closed="true" modal="true" buttons="#dlgActaDocumento-buttons">
+    <div class="ftitle">
+	  Documento a tratar en el acta</div>
+    <fieldset>
+	  <div class="fitem">
+		<label for="ActaEstudio">
+		    Estudio:</label>
+		<input class="easyui-combobox" id="cboActaEstudio" name="ActaEstudio" style="width: 500px" />           
+	  </div>
+        <div class="fitem">
+		<label for="ActaDocumento">
+		    Documento:</label>
+		<input class="easyui-combobox" id="cboActaDocumento" name="ActaDocumento" style="width: 500px" />                    
+	  </div>
+        <div class="fitem">
+		<label for="ActaDocumentoVersion">
+		    Versión:</label>
+		<input class="easyui-combobox" id="cboActaDocumentoVersion" name="ActaDocumentoVersion" style="width: 500px" />
+	  </div>
+        <div class="fitem">
+		<label for="ResponsableComite">
+		    Responsable:</label>
+		<input class="easyui-combobox" id="cboActaDocumentoResponsableComite" name="ResponsableComite" style="width: 500px" 
+                    data-options="
+				    url:'handlers/ProfesionalesHandler.ashx?accion=LISTAR-MIEMBOSCOMITE',
+				    valueField:'Id',
+				    textField:'NombreCompleto',
+				    panelHeight:'auto'" />
+	  </div>
+        <div id="panelActaDocumentoComentario">
+		<textarea class="easyui-validatebox campoTextArea" id="txtActaDocumentoComentario" name="ActaDocumentoComentario"
+                style="width: 580px; height: 180px;"></textarea>		
+	  </div>
+    </fieldset>
+</div>
+<div id="dlgActaDocumento-buttons">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-ok" onclick="guardarActaDocumento()">
+	  Guardar</a> 
+    <a href="#" class="easyui-linkbutton" iconcls="icon-cancel" onclick="cancelarActaDocumento()">
+	  Cancelar</a>   
+</div>
+
+<div id="dlgNotaTratada" class="easyui-dialog" style="width: 650px; height: 450px;
+    padding: 10px 20px" closed="true" modal="true" buttons="#dlgNotaTratada-buttons">
+    <div class="ftitle">
+	  Nota a tratar en el acta</div>
+    <fieldset>
+	  <div class="fitem">
+		<label for="ActaEstudio">Estudio:</label>
+		<input class="easyui-combobox" id="cboActaEstudioNota" name="ActaEstudio" style="width: 500px" />
+	  </div>
+        <div class="fitem">
+            <label for="ActaNotaPosicionImprime">Imprimir:</label>
+		<select id="cboActaNotaPosicionImprime" class="easyui-combobox" name="ActaNotaPosicionImprime" style="width:500px;" data-options="required:true">
+		    <option value="0">ANTES DE DOCUMENTOS TRATADOS</option>
+		    <option value="1">A CONTINUACIÓN DE DOCUMENTOS TRATADOS</option>
+	      </select>
+        </div>
+        <div class="fitem">
+	      <label for="NotaTratada">Nota:</label>
+	      <input class="easyui-combobox" id="cboActaNotaTratada" name="NotaTratada" style="width: 500px" />                    
+        </div>        
+        <div id="panelNotaTratadaTexto">
+		<textarea class="easyui-validatebox campoTextArea" id="txtNotaTratadaTexto" name="NotaTratadaTexto"
+                style="width: 580px; height: 250px;" disabled="disabled"></textarea>		
+	  </div>
+    </fieldset>
+</div>
+<div id="dlgNotaTratada-buttons">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-ok" onclick="guardarNotaTratada()">
+	  Guardar</a> 
+    <a href="#" class="easyui-linkbutton" iconcls="icon-cancel" onclick="cancelarNotaTratada()">
+	  Cancelar</a>   
+</div>
+
+<div id="dlgNuevaNotaTratada" class="easyui-dialog" style="width: 625px; height: 480px;
+    padding: 10px 10px" closed="true" modal="true" buttons="#dlgNuevaNotaTratada-buttons">
+    <div class="ftitle">
+	  Nota a tratar en el acta</div>
+    <fieldset>
+	  <div class="fitem">
+		<label for="ActaEstudio">Estudio:</label>
+		<input class="easyui-combobox" id="cboActaEstudioNuevaNota" name="ActaEstudio" style="width: 455px" />
+	  </div>
+        <div class="fitem">
+            <label for="ActaNuevaNotaPosicionImprime">Imprimir:</label>
+		<select id="cboActaNuevaNotaPosicionImprime" class="easyui-combobox" name="ActaNotaPosicionImprime" style="width:455px;" data-options="required:true">
+		    <option value="0">ANTES DE DOCUMENTOS TRATADOS</option>
+		    <option value="1">A CONTINUACIÓN DE DOCUMENTOS TRATADOS</option>
+	      </select>
+        </div>       
+        <div class="fitem">
+			<label for="Descripcion">
+				Descripción:</label>
+			<input class="easyui-validatebox campoABMLargo" type="text" id="txtNuevaNotaDescripcion"
+				name="Descripcion"></input>
+		</div>
+		<div class="fitem">
+			<label for="Autor">
+				Autor:</label>
+			<input class="easyui-combobox" id="cboNuevaNotaAutor" name="Autor" style="width: 455px"
+				data-options="
+						url:'handlers/ProfesionalesHandler.ashx?accion=LISTAR',
+						valueField:'Id',
+						textField:'NombreCompleto',
+						panelHeight:'auto'" />
+		</div>		
+    </fieldset>
+	<div id="panelNuevaNotaTexto">
+        <textarea class="easyui-validatebox campoTextArea" id="txtNuevaNotaTexto" name="Nota" cols="90" rows="15"
+            style="width: 99%; height: 97%;"></textarea>
+    </div>
+</div>
+<div id="dlgNuevaNotaTratada-buttons">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-ok" onclick="guardarNuevaNotaTratada()">
+	  Guardar</a> 
+    <a href="#" class="easyui-linkbutton" iconcls="icon-cancel" onclick="cancelarNuevaNotaTratada()">
+	  Cancelar</a>   
+</div>
+
+<uc1:PlantillaSeleccionControl ID="PlantillaSeleccionControl1" runat="server" />

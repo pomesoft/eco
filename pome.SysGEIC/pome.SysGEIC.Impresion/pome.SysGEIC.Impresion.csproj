@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE4C5982-BA4E-4A1C-9631-252101757E73}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pome.SysGEIC.Impresion</RootNamespace>
+    <AssemblyName>pome.SysGEIC.Impresion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NVelocity">
+      <HintPath>..\..\..\Frameworks\NVelocity\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="wnvhtmlconvert, Version=7.0.0.0, Culture=neutral, PublicKeyToken=5b5f377bc08a4d32, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Frameworks\WnvHtmlToPDF\wnvhtmlconvert.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\DocumentoTratado.cs" />
+    <Compile Include="DTO\EstudioTratado.cs" />
+    <Compile Include="DTO\TipoDocumentoTratado.cs" />
+    <Compile Include="HTMLParser.cs" />
+    <Compile Include="HTMLTag.cs" />
+    <Compile Include="NVelocityEngineFactory.cs" />
+    <Compile Include="NVelocity\NVelocityFile.cs" />
+    <Compile Include="NVelocity\INVelocity.cs" />
+    <Compile Include="NVelocity\NVelocityBase.cs" />
+    <Compile Include="NVelocity\NVelocityMemory.cs" />
+    <Compile Include="ProcesadorHelpers.cs" />
+    <Compile Include="ProcesadorPDF.cs" />
+    <Compile Include="ProcesadorPlantillaEncabezadoPiePagina.cs" />
+    <Compile Include="ProcesadorPlantillaActa.cs" />
+    <Compile Include="ProcesadorPlantillaCarta.cs" />
+    <Compile Include="ProcesadorPlantilla.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pome.SysGEIC.Comunes\pome.SysGEIC.Comunes.csproj">
+      <Project>{C5E814EC-0474-4773-99DD-46573313F4EE}</Project>
+      <Name>pome.SysGEIC.Comunes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pome.SysGEIC.Entidades\pome.SysGEIC.Entidades.csproj">
+      <Project>{8FE8E54F-4B7E-4078-A911-5353B5C7FC21}</Project>
+      <Name>pome.SysGEIC.Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

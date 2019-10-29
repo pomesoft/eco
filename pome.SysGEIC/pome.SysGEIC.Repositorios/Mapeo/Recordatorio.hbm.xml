@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.Recordatorio" table="Recordatorios" lazy="false">
+        <id name="Id" column="IdRecordatorio">
+            <generator class="identity" />
+        </id>
+        <property name="Descripcion" column="Descripcion" />
+        <property name="Vigente" column="Vigente" />
+        <many-to-one name="TipoRecordatorio" column="IdTipoRecordatorio" class="pome.SysGEIC.Entidades.TipoRecordatorio" />
+        <many-to-one name="EstadoRecordatorio" column="IdEstadoRecordatorio" class="pome.SysGEIC.Entidades.EstadoRecordatorio" />
+        <property name="FechaAlta" column="FechaAlta" />
+        <property name="FechaActivacion" column="FechaActivacion" />
+        <property name="AvisoMail" column="AvisoMail" />
+        <property name="AvisoPopup" column="AvisoPopup" />
+        <property name="Color" column="Color" />
+        <property name="Texto" column="Texto" />
+        <property name="Destinatarios" column="Destinatarios" />
+        <property name="DestinatariosCC" column="DestinatariosCC" />
+        <property name="Asunto" column="Asunto" />
+        <property name="TextoMail" column="TextoMail" />
+        <property name="EstadoMail" column="EstadoMail" />
+        <many-to-one name="Estudio" column="IdEstudio" class="pome.SysGEIC.Entidades.Estudio" />
+        <bag name="Documentos" inverse="true" cascade="all-delete-orphan">
+            <key column="IdRecordatorio" />
+            <one-to-many class="pome.SysGEIC.Entidades.RecordatorioDocumento" />
+        </bag>
+    </class>
+</hibernate-mapping>

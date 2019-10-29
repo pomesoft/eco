@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="pome.SysGEIC.Entidades" namespace="pome.SysGEIC.Entidades" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="pome.SysGEIC.Entidades.TipoEstudio" table="TiposEstudio" lazy="false">
+        <id name="Id" column="IdTipoEstudio">
+            <generator class="identity" />
+        </id>
+        <property name="Descripcion" column="Descripcion" />
+        <property name="Vigente" column="Vigente" />
+        <property name="CR_Texto_1" column="CR_Texto_1" />
+        <property name="CR_Texto_2" column="CR_Texto_2" />
+        <property name="CR_Texto_3" column="CR_Texto_3" />
+        <property name="CR_Texto_4" column="CR_Texto_4" />
+        
+    </class>
+</hibernate-mapping>
